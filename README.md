@@ -108,7 +108,7 @@ Monitor financial performance using executive KPIs, profitability metrics, and b
 
 ---
 
-## 📞 Financial Consumer Complaints Analysis Bank of America
+## 📞 Financial Consumer Complaints Analysis Bank Of America
 
 [![Complaints Dashboard](case-studies/financial-consumer-complaints/dashboard.png)](case-studies/financial-consumer-complaints)
 
