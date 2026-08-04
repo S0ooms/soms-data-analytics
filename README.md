@@ -115,10 +115,10 @@ Customer Experience Analytics
 
 # 📬 Let's Connect
 
-📧 Email: your@email.com
+📧 Email: somelerano.chan@gmail.com
 
 💼 LinkedIn:
-https://linkedin.com/in/yourprofile
+https://www.linkedin.com/in/somschan/
 
 ---
 
