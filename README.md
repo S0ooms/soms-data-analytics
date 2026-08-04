@@ -84,7 +84,7 @@ Identify downtime drivers, production losses, and operational improvement opport
 
 ---
 
-## 🍽 Food & Beverage Sales Dashboard
+## 🍽 Food and Beverage Sales Dashboard
 
 [![Food Dashboard](case-studies/food-and-beverage-sales-dashboard/dashboard.png)](case-studies/food-and-beverage-sales-dashboard)
 
@@ -108,7 +108,7 @@ Monitor financial performance using executive KPIs, profitability metrics, and b
 
 ---
 
-## 📞 Financial Consumer Complaints Analysis
+## 📞 Financial Consumer Complaints Analysis Bank of America
 
 [![Complaints Dashboard](case-studies/financial-consumer-complaints/dashboard.png)](case-studies/financial-consumer-complaints)
 
