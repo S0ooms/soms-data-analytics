@@ -2,87 +2,127 @@
 
 ## Brewing Insights. Delivering Impact.
 
-### Business Intelligence & Data Analytics Professional
+### Business Intelligence • Data Analytics • Data Storytelling
 
-I transform raw data into actionable business insights through analytics, dashboard development, and data storytelling.
+Welcome to my Data Analytics Portfolio.
+
+I transform raw data into actionable business insights through interactive dashboards, business intelligence, and data storytelling.
 
 ---
 
 # 👋 About Me
 
-Hi! I'm **Somel Chan**, a Business Intelligence & Data Analytics Professional passionate about transforming complex datasets into meaningful business decisions.
+Hi! I'm **Somel Chan**.
 
-My portfolio demonstrates complete analytics projects—from business understanding and data preparation to dashboard development and actionable recommendations.
+I specialize in transforming complex datasets into meaningful business decisions using Power BI, SQL, Excel, and Python.
+
+My portfolio demonstrates complete analytics projects—from business understanding and data preparation to dashboard development, KPI design, and executive-level recommendations.
 
 ---
 
-# 🏆 Featured Analytics Case Studies
+# 🚀 Featured Analytics Case Studies
+
+---
 
 ## 🏦 Bank Churn Analysis
 
-[![Bank Churn](case-studies/bank-churn-analysis/dashboard.png)](case-studies/bank-churn-analysis)
+[![Bank Churn Dashboard](case-studies/bank-churn-analysis/dashboard.png)](case-studies/bank-churn-analysis)
 
-Customer Retention Analytics
+### Customer Retention Analytics
+
+Identify customer churn drivers and recommend retention strategies through customer segmentation and behavioral analysis.
+
+➡️ **[View Complete Case Study](case-studies/bank-churn-analysis)**
 
 ---
 
 ## 🏠 Airbnb Executive Dashboard
 
-[![Airbnb](case-studies/airbnb-executive-dashboard/dashboard.png)](case-studies/airbnb-executive-dashboard)
+[![Airbnb Dashboard](case-studies/airbnb-executive-dashboard/dashboard.png)](case-studies/airbnb-executive-dashboard)
 
-Hospitality Performance Analytics
+### Hospitality Performance Analytics
+
+Analyze listing performance, pricing trends, occupancy patterns, and market opportunities.
+
+➡️ **[View Complete Case Study](case-studies/airbnb-executive-dashboard)**
 
 ---
 
 ## 🏥 Hospital ER Analysis
 
-[![Hospital ER](case-studies/hospital-er-analysis/dashboard.png)](case-studies/hospital-er-analysis)
+[![Hospital Dashboard](case-studies/hospital-er-analysis/dashboard.png)](case-studies/hospital-er-analysis)
 
-Healthcare Operations Analytics
+### Emergency Department Performance
+
+Evaluate patient flow, waiting time, referrals, and operational efficiency.
+
+➡️ **[View Complete Case Study](case-studies/hospital-er-analysis)**
 
 ---
 
 ## 👥 HR Data Analytics
 
-[![HR](case-studies/hr-data-analytics/dashboard.png)](case-studies/hr-data-analytics)
+[![HR Dashboard](case-studies/hr-data-analytics/dashboard.png)](case-studies/hr-data-analytics)
 
-Human Resource Analytics
+### Workforce Analytics
+
+Analyze employee demographics, attrition, workforce distribution, and HR performance metrics.
+
+➡️ **[View Complete Case Study](case-studies/hr-data-analytics)**
 
 ---
 
 ## 🏭 Manufacturing Downtime Analysis
 
-[![Manufacturing](case-studies/manufacturing-downtime-analysis/dashboard.png)](case-studies/manufacturing-downtime-analysis)
+[![Manufacturing Dashboard](case-studies/manufacturing-downtime-analysis/dashboard.png)](case-studies/manufacturing-downtime-analysis)
 
-Manufacturing Performance Analytics
+### Production Performance Analytics
+
+Identify downtime drivers, production losses, and operational improvement opportunities.
+
+➡️ **[View Complete Case Study](case-studies/manufacturing-downtime-analysis)**
 
 ---
 
 ## 🍽 Food & Beverage Sales Dashboard
 
-[![Food](case-studies/food-beverage-sales-dashboard/dashboard.png)](case-studies/food-beverage-sales-dashboard)
+[![Food Dashboard](case-studies/food-and-beverage-sales-dashboard/dashboard.png)](case-studies/food-and-beverage-sales-dashboard)
 
-Retail Sales Analytics
+### Sales Performance Analytics
+
+Analyze revenue trends, product performance, customer purchasing behavior, and profitability.
+
+➡️ **[View Complete Case Study](case-studies/food-and-beverage-sales-dashboard)**
 
 ---
 
 ## 💰 Financial Report Dashboard
 
-[![Financial](case-studies/financial-report/dashboard.png)](case-studies/financial-report)
+[![Financial Dashboard](case-studies/financial-report/dashboard.png)](case-studies/financial-report)
 
-Financial Performance Analytics
+### Executive Financial Reporting
 
----
+Monitor financial performance using executive KPIs, profitability metrics, and business trends.
 
-## 📞 Financial Consumer Complaints
-
-[![Complaints](case-studies/financial-consumer-complaints/dashboard.png)](case-studies/financial-consumer-complaints)
-
-Customer Experience Analytics
+➡️ **[View Complete Case Study](case-studies/financial-report)**
 
 ---
 
-## 🌍 Global CO₂ Emissions *(Coming Soon)*
+## 📞 Financial Consumer Complaints Analysis
+
+[![Complaints Dashboard](case-studies/financial-consumer-complaints/dashboard.png)](case-studies/financial-consumer-complaints)
+
+### Customer Experience Analytics
+
+Analyze complaint trends, issue categories, customer satisfaction, and service quality.
+
+➡️ **[View Complete Case Study](case-studies/financial-consumer-complaints)**
+
+---
+
+## 🌍 Global CO₂ Emissions Analysis *(Coming Soon)*
+
+An executive sustainability dashboard focused on emissions trends, regional comparisons, and environmental insights.
 
 ---
 
@@ -98,16 +138,25 @@ Customer Experience Analytics
 
 - SQL
 - Excel
-- Python *(Learning)*
+- Python *(Currently Learning)*
 
-### Analytics
+### Data Visualization
 
 - Dashboard Design
 - KPI Development
+- Business Storytelling
+- Executive Reporting
+
+### Data Preparation
+
 - Data Cleaning
 - Data Modeling
+- ETL
+- Data Transformation
+
+### Business
+
 - Business Analysis
-- Data Storytelling
 - Process Improvement
 - Lean Six Sigma
 
@@ -115,13 +164,18 @@ Customer Experience Analytics
 
 # 📬 Let's Connect
 
-📧 Email: somelerano.chan@gmail.com
+📧 **Email**
 
-💼 LinkedIn:
-https://www.linkedin.com/in/somschan/
+**somelerano.chan@gmail.com**
+
+💼 **LinkedIn**
+
+**https://linkedin.com/in/somschan**
 
 ---
 
-> **S.O.M.S.**
+> ### ☕ S.O.M.S.
 >
-> Brewing Insights. Delivering Impact.
+> **Brewing Insights. Delivering Impact.**
+>
+> Turning data into decisions—one dashboard at a time.
