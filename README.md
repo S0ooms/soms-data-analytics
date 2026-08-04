@@ -110,7 +110,7 @@ Monitor financial performance using executive KPIs, profitability metrics, and b
 
 ## 📞 Financial Consumer Complaints Analysis Bank Of America
 
-[![Complaints Dashboard](case-studies/financial-consumer-complaints-analysis-bank-of-america/dashboard.png)](case-studies/financial-consumer-complaints)
+[![Complaints Dashboard](case-studies/financial-consumer-complaints-analysis-bank-of-america/dashboard.png)](case-studies/financial-consumer-complaints-analysis-bank-of-america)
 
 ### Customer Experience Analytics
 
