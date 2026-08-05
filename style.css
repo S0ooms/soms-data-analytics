@@ -266,48 +266,49 @@ FEATURED PROJECTS
 ========================================== */
 
 #projects{
+    padding:80px 40px;
+}
 
-    padding-top:120px;
+.projects-subtitle{
+    color:#999;
+    margin-bottom:35px;
+}
+
+.project-slider{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
 
 }
 
-#projects h2{
+.slider-window{
 
-    font-size:42px;
-
-    margin-bottom:15px;
-
-}
-
-#projects p{
-
-    color:#94a3b8;
-
-    margin-bottom:50px;
+    overflow:hidden;
+    width:100%;
 
 }
 
-.projects-grid{
+.slider-track{
 
-    display:grid;
+    display:flex;
+    gap:30px;
 
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
-    gap:35px;
+    transition:transform .45s ease;
 
 }
-
-/* CARD */
 
 .project-card{
 
-    background:#1e293b;
+    min-width:380px;
 
-    border-radius:20px;
+    background:#1e1e1e;
+
+    border-radius:18px;
 
     overflow:hidden;
 
-    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 
     transition:.35s;
 
@@ -315,15 +316,9 @@ FEATURED PROJECTS
 
 .project-card:hover{
 
-    transform:translateY(-10px);
-
-    border-color:#c08457;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    transform:translateY(-8px);
 
 }
-
-/* IMAGE */
 
 .project-card img{
 
@@ -337,47 +332,63 @@ FEATURED PROJECTS
 
 }
 
-/* CONTENT */
+.project-info{
 
-.project-card h3{
-
-    font-size:25px;
-
-    margin:25px 25px 10px;
+    padding:22px;
 
 }
 
-.project-card p{
+.project-info h3{
 
-    margin:0 25px 25px;
-
-    color:#94a3b8;
-
-    line-height:1.8;
+    margin-bottom:10px;
 
 }
 
-/* BUTTON */
+.project-info p{
 
-.project-card a{
+    color:#a8a8a8;
 
-    display:inline-block;
+    margin-bottom:18px;
 
-    margin:0 25px 30px;
+}
+
+.project-info a{
 
     text-decoration:none;
 
-    color:#c08457;
-
     font-weight:600;
 
-    transition:.30s;
+    color:#d4a373;
 
 }
 
-.project-card a:hover{
+.slider-btn{
 
-    letter-spacing:.5px;
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d4a373;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.slider-btn:hover{
+
+    transform:scale(1.08);
+
+    background:#c68c53;
 
 }
 
