@@ -306,6 +306,8 @@ FEATURED PROJECTS
 
 .project-card{
 
+    position:relative;
+
     min-width:460px;
 
     max-width:460px;
@@ -320,12 +322,6 @@ FEATURED PROJECTS
 
     transition:.35s;
 
-}
-
-.project-card{
-
-    transition:.35s;
-
     cursor:pointer;
 
 }
@@ -335,6 +331,96 @@ FEATURED PROJECTS
     transform:translateY(-10px) scale(1.04);
 
     box-shadow:0 18px 35px rgba(0,0,0,.45);
+
+}
+
+.project-overlay{
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.industry-badge{
+
+    width:max-content;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#d4a373;
+
+    color:#fff;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.project-overlay h3{
+
+    font-size:1.3rem;
+
+    margin:0;
+
+}
+
+.project-overlay p{
+
+    color:#b8b8b8;
+
+    line-height:1.6;
+
+    min-height:72px;
+
+}
+
+.tools{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.tools span{
+
+    background:#2b2b2b;
+
+    color:#fff;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+}
+
+.view-project{
+
+    margin-top:auto;
+
+    color:#d4a373;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.project-card:hover .view-project{
+
+    transform:translateX(8px);
 
 }
 
