@@ -276,9 +276,15 @@ FEATURED PROJECTS
 
 .project-slider{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:60px 1fr 60px;
+
     align-items:center;
+
     gap:20px;
+
+    width:100%;
 
 }
 
@@ -464,25 +470,31 @@ FEATURED PROJECTS
 
 .slider-btn{
 
-    width:60px;
+    width:50px;
 
-    height:60px;
-
-    border-radius:50%;
+    height:50px;
 
     border:none;
 
+    border-radius:50%;
+
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 
-    color:white;
+    color:#fff;
 
-    font-size:28px;
+    font-size:26px;
 
     cursor:pointer;
 
-    transition:.30s;
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
