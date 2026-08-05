@@ -88,28 +88,6 @@
 
 # 
 
-# The dataset includes:
-
-# 
-
-# \- Listings
-
-# \- Hosts
-
-# \- Neighborhoods
-
-# \- Property Types
-
-# \- Prices
-
-# \- Reviews
-
-# \- Availability
-
-# \- Geographic Locations
-
-# 
-
 # \---
 
 # 
@@ -150,65 +128,17 @@
 
 # 
 
-# \# Dashboard Features
-
-# 
-
-# The dashboard enables users to:
-
-# 
-
-# \- Analyze listing performance
-
-# \- Compare neighborhood pricing
-
-# \- Identify premium locations
-
-# \- Explore property type distribution
-
-# \- Evaluate listing availability
-
-# \- Monitor market trends
-
-# 
-
-# \---
-
-# 
-
 # \# Key Insights
 
 # 
 
-# \### 📍 Premium neighborhoods consistently command higher listing prices.
+# \- Premium neighborhoods consistently command higher listing prices.
 
-# 
+# \- Entire homes generate higher average prices than private rooms.
 
-# High-demand areas significantly outperform other neighborhoods.
+# \- Higher review ratings are associated with stronger pricing.
 
-# 
-
-# \### 🏠 Entire homes generate higher average prices than private rooms.
-
-# 
-
-# Property type has a direct impact on pricing strategy.
-
-# 
-
-# \### ⭐ Listings with better review ratings generally maintain stronger pricing.
-
-# 
-
-# Customer satisfaction contributes to higher perceived property value.
-
-# 
-
-# \### 📈 Availability varies across neighborhoods.
-
-# 
-
-# Some areas demonstrate higher occupancy potential than others.
+# \- Availability varies significantly across neighborhoods.
 
 # 
 
@@ -262,41 +192,17 @@
 
 # 
 
-# \### Business Intelligence
-
-# 
-
 # \- Power BI
 
 # \- Power Query
 
 # \- DAX
 
-# 
-
-# \### Data Analytics
-
-# 
+# \- Data Modeling
 
 # \- Data Cleaning
 
-# \- Data Modeling
-
-# \- KPI Development
-
 # \- Dashboard Design
-
-# \- Data Visualization
-
-# 
-
-# \### Business Analysis
-
-# 
-
-# \- Trend Analysis
-
-# \- Executive Reporting
 
 # \- Business Storytelling
 
@@ -326,7 +232,7 @@
 
 # 
 
-# This project demonstrates the complete Business Intelligence workflow—from raw data preparation to executive dashboard development—providing actionable insights that support data-driven decision-making.
+# This project demonstrates an end-to-end Business Intelligence workflow, transforming Airbnb listing data into executive-level insights that support informed business decisions.
 
 # 
 
