@@ -260,3 +260,273 @@ ABOUT
     margin-bottom:25px;
 
 }
+
+/* ==========================================
+FEATURED PROJECTS
+========================================== */
+
+#projects{
+
+    padding-top:120px;
+
+}
+
+#projects h2{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+#projects p{
+
+    color:#94a3b8;
+
+    margin-bottom:50px;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+/* CARD */
+
+.project-card{
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#c08457;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* IMAGE */
+
+.project-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* CONTENT */
+
+.project-card h3{
+
+    font-size:25px;
+
+    margin:25px 25px 10px;
+
+}
+
+.project-card p{
+
+    margin:0 25px 25px;
+
+    color:#94a3b8;
+
+    line-height:1.8;
+
+}
+
+/* BUTTON */
+
+.project-card a{
+
+    display:inline-block;
+
+    margin:0 25px 30px;
+
+    text-decoration:none;
+
+    color:#c08457;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.project-card a:hover{
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================
+SKILLS
+========================================== */
+
+#skills h2{
+
+    font-size:42px;
+
+    margin-bottom:45px;
+
+}
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.skills span{
+
+    background:#1e293b;
+
+    padding:16px 28px;
+
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.30s;
+
+}
+
+.skills span:hover{
+
+    background:#c08457;
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================
+CONTACT
+========================================== */
+
+#contact{
+
+    padding-bottom:120px;
+
+}
+
+#contact h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+#contact p{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+}
+
+#contact a{
+
+    color:#c08457;
+
+    text-decoration:none;
+
+}
+
+#contact a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#94a3b8;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+main{
+
+    margin-left:0;
+
+    width:100%;
+
+}
+
+.hero-text h1{
+
+    font-size:50px;
+
+}
+
+.hero-text h2{
+
+    font-size:30px;
+
+}
+
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.skills{
+
+    justify-content:center;
+
+}
+
+}
