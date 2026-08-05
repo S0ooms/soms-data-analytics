@@ -1,16 +1,16 @@
-# \# 🏠 Airbnb Executive Dashboard
+# # 🏠 Airbnb Executive Dashboard
 
 # 
 
-# !\[Dashboard](dashboard.png)
+# ![Dashboard](dashboard.png)
 
 # 
 
-# \---
+# ---
 
 # 
 
-# \# Executive Summary
+# # Executive Summary
 
 # 
 
@@ -18,11 +18,11 @@
 
 # 
 
-# \---
+# ---
 
 # 
 
-# \# Business Problem
+# # Business Problem
 
 # 
 
@@ -30,13 +30,13 @@
 
 # 
 
-# \- Which neighborhoods perform best
+# - Which neighborhoods perform best
 
-# \- Which property types generate the highest revenue
+# - Which property types generate the highest revenue
 
-# \- How pricing varies across locations
+# - How pricing varies across locations
 
-# \- Which listings have the highest demand
+# - Which listings have the highest demand
 
 # 
 
@@ -44,33 +44,33 @@
 
 # 
 
-# \---
+# ---
 
 # 
 
-# \# Project Objectives
+# # Project Objectives
 
 # 
 
-# \- Analyze Airbnb market performance
+# - Analyze Airbnb market performance
 
-# \- Compare neighborhood performance
+# - Compare neighborhood performance
 
-# \- Identify high-performing property types
+# - Identify high-performing property types
 
-# \- Evaluate pricing trends
+# - Evaluate pricing trends
 
-# \- Discover revenue opportunities
+# - Discover revenue opportunities
 
-# \- Build an executive dashboard for decision-makers
-
-# 
-
-# \---
+# - Build an executive dashboard for decision-makers
 
 # 
 
-# \# Dataset Overview
+# ---
+
+# 
+
+# # Dataset Overview
 
 # 
 
@@ -88,65 +88,65 @@
 
 # 
 
-# \---
+# ---
 
 # 
 
-# \# Dashboard Preview
+# # Dashboard Preview
 
 # 
 
-# !\[Dashboard](dashboard.png)
+# ![Dashboard](dashboard.png)
 
 # 
 
-# \---
+# ---
 
 # 
 
-# \# Key Performance Indicators (KPIs)
+# # Key Performance Indicators (KPIs)
 
 # 
 
-# \- Total Listings
+# - Total Listings
 
-# \- Average Listing Price
+# - Average Listing Price
 
-# \- Average Review Rating
+# - Average Review Rating
 
-# \- Average Availability
+# - Average Availability
 
-# \- Total Neighborhoods
+# - Total Neighborhoods
 
-# \- Top Performing Neighborhood
+# - Top Performing Neighborhood
 
-# \- Most Common Property Type
-
-# 
-
-# \---
+# - Most Common Property Type
 
 # 
 
-# \# Key Insights
+# ---
 
 # 
 
-# \- Premium neighborhoods consistently command higher listing prices.
-
-# \- Entire homes generate higher average prices than private rooms.
-
-# \- Higher review ratings are associated with stronger pricing.
-
-# \- Availability varies significantly across neighborhoods.
+# # Key Insights
 
 # 
 
-# \---
+# - Premium neighborhoods consistently command higher listing prices.
+
+# - Entire homes generate higher average prices than private rooms.
+
+# - Higher review ratings are associated with stronger pricing.
+
+# - Availability varies significantly across neighborhoods.
 
 # 
 
-# \# Business Impact
+# ---
+
+# 
+
+# # Business Impact
 
 # 
 
@@ -154,81 +154,81 @@
 
 # 
 
-# \- Optimize pricing strategies
+# - Optimize pricing strategies
 
-# \- Identify profitable investment locations
+# - Identify profitable investment locations
 
-# \- Improve occupancy planning
+# - Improve occupancy planning
 
-# \- Compare neighborhood competitiveness
+# - Compare neighborhood competitiveness
 
-# \- Support strategic business decisions
-
-# 
-
-# \---
+# - Support strategic business decisions
 
 # 
 
-# \# Recommendations
+# ---
 
 # 
 
-# \- Invest in high-performing neighborhoods.
-
-# \- Improve listing quality to increase review ratings.
-
-# \- Optimize pricing for underperforming listings.
-
-# \- Monitor seasonal availability trends.
+# # Recommendations
 
 # 
 
-# \---
+# - Invest in high-performing neighborhoods.
+
+# - Improve listing quality to increase review ratings.
+
+# - Optimize pricing for underperforming listings.
+
+# - Monitor seasonal availability trends.
 
 # 
 
-# \# Skills Demonstrated
+# ---
 
 # 
 
-# \- Power BI
-
-# \- Power Query
-
-# \- DAX
-
-# \- Data Modeling
-
-# \- Data Cleaning
-
-# \- Dashboard Design
-
-# \- Business Storytelling
+# # Skills Demonstrated
 
 # 
 
-# \---
+# - Power BI
+
+# - Power Query
+
+# - DAX
+
+# - Data Modeling
+
+# - Data Cleaning
+
+# - Dashboard Design
+
+# - Business Storytelling
 
 # 
 
-# \# Tools Used
+# ---
 
 # 
 
-# \- Microsoft Power BI
-
-# \- Power Query
-
-# \- DAX
+# # Tools Used
 
 # 
 
-# \---
+# - Microsoft Power BI
+
+# - Power Query
+
+# - DAX
 
 # 
 
-# \# Project Outcome
+# ---
+
+# 
+
+# # Project Outcome
 
 # 
 
@@ -236,9 +236,9 @@
 
 # 
 
-# \---
+# ---
 
 # 
 
-# ⬅️ \[Back to Portfolio](../../README.md)
+# ⬅️ [Back to Portfolio](../../README.md)
 
