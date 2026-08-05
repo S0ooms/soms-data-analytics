@@ -1,164 +1,118 @@
-# ☕ S.O.M.S.
+# ☕ Soms
 
 ## Brewing Insights. Delivering Impact.
 
 ### Business Intelligence • Data Analytics • Data Storytelling
 
-Welcome to my Data Analytics Portfolio.
+---
 
-I transform raw data into actionable business insights through interactive dashboards, business intelligence, and data storytelling.
+# 👋 Hi, I'm Somel Chan
+
+I'm a **Business Intelligence & Data Analytics Professional** passionate about transforming raw data into meaningful business insights.
+
+I specialize in designing executive dashboards, building KPI-driven reports, uncovering actionable insights, and improving business processes through data.
+
+My goal is simple:
+
+> **Turn complex data into clear decisions.**
 
 ---
 
-# 👋 About Me
+# 🚀 Featured Analytics Portfolio
 
-Hi! I'm **Somel Chan**.
+### 🏆 Explore complete end-to-end analytics case studies.
 
-I specialize in transforming complex datasets into meaningful business decisions using Power BI, SQL, Excel, and Python.
-
-My portfolio demonstrates complete analytics projects—from business understanding and data preparation to dashboard development, KPI design, and executive-level recommendations.
-
----
-
-# 🚀 Featured Analytics Case Studies
-
----
-
-## 🏦 Bank Churn Analysis
-
-[![Bank Churn Dashboard](case-studies/bank-churn-analysis/dashboard.png)](case-studies/bank-churn-analysis)
-
-### Customer Retention Analytics
-
-Identify customer churn drivers and recommend retention strategies through customer segmentation and behavioral analysis.
-
-➡️ **[View Complete Case Study](case-studies/bank-churn-analysis)**
+| Project | Description |
+|---------|-------------|
+| 🏦 [Bank Churn Analysis](case-studies/bank-churn-analysis) | Customer Retention Analytics |
+| 🏠 [Airbnb Executive Dashboard](case-studies/airbnb-executive-dashboard) | Hospitality Performance Analytics |
+| 🏥 [Hospital ER Analysis](case-studies/hospital-er-analysis) | Emergency Department Performance |
+| 👥 [HR Data Analytics](case-studies/hr-data-analytics) | Workforce Analytics |
+| 🏭 [Manufacturing Downtime Analysis](case-studies/manufacturing-downtime-analysis) | Production Performance Analytics |
+| 🍽 [Food & Beverage Sales Dashboard](case-studies/food-and-beverage-sales-dashboard) | Retail Sales Analytics |
+| 💰 [Financial Report Dashboard](case-studies/financial-report) | Executive Financial Reporting |
+| 📞 [Financial Consumer Complaints](case-studies/financial-consumer-complaints-analysis-bank-of-america) | Customer Experience Analytics |
+| 🌍 Global CO₂ Emissions *(Coming Soon)* | Sustainability Analytics |
 
 ---
 
-## 🏠 Airbnb Executive Dashboard
+# 🔭 Currently Working On
 
-[![Airbnb Dashboard](case-studies/airbnb-executive-dashboard/dashboard.png)](case-studies/airbnb-executive-dashboard)
-
-### Hospitality Performance Analytics
-
-Analyze listing performance, pricing trends, occupancy patterns, and market opportunities.
-
-➡️ **[View Complete Case Study](case-studies/airbnb-executive-dashboard)**
+- 🌍 Global CO₂ Emissions Executive Dashboard
+- ☕ Building the Soms Analytics Portfolio
+- 📊 Creating real-world business case studies
+- 🐍 Expanding Python for Data Analytics
 
 ---
 
-## 🏥 Hospital ER Analysis
+# 🌱 Currently Learning
 
-[![Hospital Dashboard](case-studies/hospital-er-analysis/dashboard.png)](case-studies/hospital-er-analysis)
-
-### Emergency Department Performance
-
-Evaluate patient flow, waiting time, referrals, and operational efficiency.
-
-➡️ **[View Complete Case Study](case-studies/hospital-er-analysis)**
+- Python for Data Analytics
+- SQL Query Optimization
+- Advanced DAX
+- Microsoft Fabric
+- Data Engineering Fundamentals
 
 ---
 
-## 👥 HR Data Analytics
+# 🛠 Technical Skillset
 
-[![HR Dashboard](case-studies/hr-data-analytics/dashboard.png)](case-studies/hr-data-analytics)
+## Business Intelligence
 
-### Workforce Analytics
-
-Analyze employee demographics, attrition, workforce distribution, and HR performance metrics.
-
-➡️ **[View Complete Case Study](case-studies/hr-data-analytics)**
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Power Query](https://img.shields.io/badge/Power_Query-217346?style=for-the-badge)
+![DAX](https://img.shields.io/badge/DAX-005A9C?style=for-the-badge)
 
 ---
 
-## 🏭 Manufacturing Downtime Analysis
+## Data Analytics
 
-[![Manufacturing Dashboard](case-studies/manufacturing-downtime-analysis/dashboard.png)](case-studies/manufacturing-downtime-analysis)
-
-### Production Performance Analytics
-
-Identify downtime drivers, production losses, and operational improvement opportunities.
-
-➡️ **[View Complete Case Study](case-studies/manufacturing-downtime-analysis)**
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ---
 
-## 🍽 Food and Beverage Sales Dashboard
-
-[![Food Dashboard](case-studies/food-and-beverage-sales-dashboard/dashboard.png)](case-studies/food-and-beverage-sales-dashboard)
-
-### Sales Performance Analytics
-
-Analyze revenue trends, product performance, customer purchasing behavior, and profitability.
-
-➡️ **[View Complete Case Study](case-studies/food-and-beverage-sales-dashboard)**
-
----
-
-## 💰 Financial Report Dashboard
-
-[![Financial Dashboard](case-studies/financial-report/dashboard.png)](case-studies/financial-report)
-
-### Executive Financial Reporting
-
-Monitor financial performance using executive KPIs, profitability metrics, and business trends.
-
-➡️ **[View Complete Case Study](case-studies/financial-report)**
-
----
-
-## 📞 Financial Consumer Complaints Analysis Bank Of America
-
-[![Complaints Dashboard](case-studies/financial-consumer-complaints-analysis-bank-of-america/dashboard.png)](case-studies/financial-consumer-complaints-analysis-bank-of-america)
-
-### Customer Experience Analytics
-
-Analyze complaint trends, issue categories, customer satisfaction, and service quality.
-
-➡️ **[View Complete Case Study](case-studies/financial-consumer-complaints)**
-
----
-
-## 🌍 Global CO₂ Emissions Analysis *(Coming Soon)*
-
-An executive sustainability dashboard focused on emissions trends, regional comparisons, and environmental insights.
-
----
-
-# 🛠 Technical Skills
-
-### Business Intelligence
-
-- Power BI
-- Power Query
-- DAX
-
-### Data Analytics
-
-- SQL
-- Excel
-- Python *(Currently Learning)*
-
-### Data Visualization
+## Analytics Skills
 
 - Dashboard Design
+- Data Visualization
 - KPI Development
-- Business Storytelling
-- Executive Reporting
-
-### Data Preparation
-
+- Business Intelligence
+- Business Analysis
 - Data Cleaning
 - Data Modeling
-- ETL
-- Data Transformation
-
-### Business
-
-- Business Analysis
+- Data Storytelling
 - Process Improvement
 - Lean Six Sigma
+
+---
+
+# 🏅 Certifications
+
+- ✔ Advanced Business Analysis
+- ✔ Agile Business Analysis
+- ✔ Full Business Analysis
+- ✔ Lean Six Sigma Yellow Belt
+- ✔ Lean Six Sigma Green Belt Trained Professional
+- ✔ Human-Centric Leadership in Microfinance
+- ✔ Power BI
+
+---
+
+# 📈 Portfolio Highlights
+
+✔ End-to-End Analytics Projects
+
+✔ Executive Dashboards
+
+✔ Business Storytelling
+
+✔ KPI Development
+
+✔ Data Cleaning & Transformation
+
+✔ Actionable Business Recommendations
 
 ---
 
@@ -170,12 +124,12 @@ An executive sustainability dashboard focused on emissions trends, regional comp
 
 💼 **LinkedIn**
 
-**https://linkedin.com/in/somschan**
+https://linkedin.com/in/somschan
 
 ---
 
-> ### ☕ S.O.M.S.
->
-> **Brewing Insights. Delivering Impact.**
->
-> Turning data into decisions—one dashboard at a time.
+### ☕ Soms
+
+### Brewing Insights. Delivering Impact.
+
+*"Turning data into business decisions—one dashboard at a time."*
