@@ -14,7 +14,7 @@
 
 # 
 
-# This project analyzes Airbnb listings to uncover pricing trends, neighborhood performance, property availability, and revenue opportunities. The objective is to transform raw listing data into actionable business insights that support pricing strategies, investment decisions, and market analysis.
+# This project analyzes Airbnb listings to uncover pricing trends, neighborhood performance, property availability, and revenue opportunities. The dashboard transforms raw listing data into actionable insights that support pricing strategies and business decisions.
 
 # 
 
@@ -30,17 +30,17 @@
 
 # 
 
-# \- Which neighborhoods generate the highest revenue
+# \- Which neighborhoods perform best
 
-# \- Which property types perform best
+# \- Which property types generate the highest revenue
 
-# \- How pricing differs across locations
+# \- How pricing varies across locations
 
-# \- Which listings have the highest occupancy potential
+# \- Which listings have the highest demand
 
 # 
 
-# Without visual analytics, these opportunities remain hidden inside thousands of listing records.
+# Without data visualization, these opportunities remain hidden within thousands of listing records.
 
 # 
 
@@ -52,27 +52,17 @@
 
 # 
 
-# ✔ Analyze Airbnb market performance
+# \- Analyze Airbnb market performance
 
-# 
+# \- Compare neighborhood performance
 
-# ✔ Compare neighborhood performance
+# \- Identify high-performing property types
 
-# 
+# \- Evaluate pricing trends
 
-# ✔ Identify high-performing property types
+# \- Discover revenue opportunities
 
-# 
-
-# ✔ Evaluate pricing trends
-
-# 
-
-# ✔ Discover revenue opportunities
-
-# 
-
-# ✔ Build an executive dashboard for decision-makers
+# \- Build an executive dashboard for decision-makers
 
 # 
 
@@ -90,15 +80,15 @@
 
 # | Industry | Hospitality |
 
-# | Records | Airbnb Listings |
+# | Tool | Microsoft Power BI |
 
 # | Data Source | Maven Analytics Playground |
 
-# | Tool | Power BI |
+# | Dataset | Airbnb Listings |
 
 # 
 
-# The dataset contains information about:
+# The dataset includes:
 
 # 
 
@@ -116,7 +106,7 @@
 
 # \- Availability
 
-# \- Geographic Coordinates
+# \- Geographic Locations
 
 # 
 
@@ -137,10 +127,6 @@
 # 
 
 # \# Key Performance Indicators (KPIs)
-
-# 
-
-# The dashboard monitors:
 
 # 
 
@@ -168,21 +154,21 @@
 
 # 
 
-# The dashboard allows users to:
+# The dashboard enables users to:
 
 # 
 
-# \- Filter listings by neighborhood
+# \- Analyze listing performance
 
-# \- Compare property types
-
-# \- Analyze pricing distributions
-
-# \- Explore listing availability
+# \- Compare neighborhood pricing
 
 # \- Identify premium locations
 
-# \- Discover high-demand areas
+# \- Explore property type distribution
+
+# \- Evaluate listing availability
+
+# \- Monitor market trends
 
 # 
 
@@ -190,51 +176,39 @@
 
 # 
 
-# \# Key Business Insights
+# \# Key Insights
 
 # 
 
-# \### 📍 Premium neighborhoods generate significantly higher listing prices.
+# \### 📍 Premium neighborhoods consistently command higher listing prices.
 
 # 
 
-# Properties located in high-demand districts consistently outperform other areas in both pricing and popularity.
+# High-demand areas significantly outperform other neighborhoods.
 
 # 
 
-# \---
+# \### 🏠 Entire homes generate higher average prices than private rooms.
 
 # 
 
-# \### 🏡 Entire homes command the highest average prices.
+# Property type has a direct impact on pricing strategy.
 
 # 
 
-# Private rooms and shared accommodations offer lower pricing but higher listing volumes.
+# \### ⭐ Listings with better review ratings generally maintain stronger pricing.
 
 # 
 
-# \---
+# Customer satisfaction contributes to higher perceived property value.
 
 # 
 
-# \### ⭐ Highly-rated listings tend to maintain stronger pricing.
+# \### 📈 Availability varies across neighborhoods.
 
 # 
 
-# Customer reviews play a significant role in perceived property value.
-
-# 
-
-# \---
-
-# 
-
-# \### 📈 Listing availability varies considerably across neighborhoods.
-
-# 
-
-# Some areas experience consistently higher occupancy potential than others.
+# Some areas demonstrate higher occupancy potential than others.
 
 # 
 
@@ -246,7 +220,7 @@
 
 # 
 
-# This dashboard enables property owners and decision-makers to:
+# This dashboard helps decision-makers:
 
 # 
 
@@ -258,7 +232,7 @@
 
 # \- Compare neighborhood competitiveness
 
-# \- Monitor Airbnb market trends
+# \- Support strategic business decisions
 
 # 
 
@@ -270,47 +244,13 @@
 
 # 
 
-# \### Recommendation 1
+# \- Invest in high-performing neighborhoods.
 
-# 
+# \- Improve listing quality to increase review ratings.
 
-# Increase investments in neighborhoods with strong pricing and demand.
+# \- Optimize pricing for underperforming listings.
 
-# 
-
-# \---
-
-# 
-
-# \### Recommendation 2
-
-# 
-
-# Improve listing quality to maintain higher review ratings.
-
-# 
-
-# \---
-
-# 
-
-# \### Recommendation 3
-
-# 
-
-# Review pricing strategies for underperforming listings.
-
-# 
-
-# \---
-
-# 
-
-# \### Recommendation 4
-
-# 
-
-# Monitor seasonal availability to maximize occupancy.
+# \- Monitor seasonal availability trends.
 
 # 
 
@@ -358,8 +298,6 @@
 
 # \- Executive Reporting
 
-# \- Market Analysis
-
 # \- Business Storytelling
 
 # 
@@ -388,7 +326,7 @@
 
 # 
 
-# This project demonstrates the complete business intelligence workflow—from raw data preparation to executive dashboard development—transforming Airbnb listing data into actionable insights that support strategic decision-making.
+# This project demonstrates the complete Business Intelligence workflow—from raw data preparation to executive dashboard development—providing actionable insights that support data-driven decision-making.
 
 # 
 
@@ -396,5 +334,5 @@
 
 # 
 
-# ⬅️ \*\*\[Back to Portfolio](../../README.md)\*\*
+# ⬅️ \[Back to Portfolio](../../README.md)
 
