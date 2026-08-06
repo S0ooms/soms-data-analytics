@@ -261,81 +261,114 @@ ABOUT
 
 }
 
-/* =======================================
+/* ===========================
    FEATURED PROJECTS
-======================================= */
+=========================== */
 
-#projects{
+.projects-section{
 
-    padding:90px 0;
-
-    overflow:hidden;
-
-}
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
+    width:min(1400px,92%);
+    margin:0 auto;
+    padding:80px 0;
 
 }
 
-.section-title h2{
+.section-header{
 
-    font-size:2.8rem;
-
-    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
 
 }
 
-.section-title p{
+.section-header h2{
+
+    font-size:2rem;
+    margin-bottom:8px;
+
+}
+
+.section-header p{
 
     color:#9ca3af;
 
-    font-size:1.05rem;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.slider-controls{
+
+    display:flex;
+    gap:15px;
 
 }
 
-.slider-wrapper{
+.slider-btn{
 
-    position:relative;
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#1f2937;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.25s;
+
+}
+
+.slider-btn:hover{
+
+    background:#d4a373;
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   SCROLLER
+=========================== */
+
+.project-slider{
 
     display:flex;
 
-    align-items:center;
+    gap:28px;
 
-    width:100%;
+    overflow-x:auto;
 
-}
+    scroll-behavior:smooth;
 
-.slider{
+    scroll-snap-type:x mandatory;
 
-    overflow:hidden;
+    scrollbar-width:none;
 
-    width:100%;
+    -ms-overflow-style:none;
 
-}
-
-.slider-track{
-
-    display:flex;
-
-    gap:35px;
-
-    transition:transform .65s cubic-bezier(.22,.61,.36,1);
-
-    will-change:transform;
+    padding-bottom:10px;
 
 }
 
-/* =======================================
+.project-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ===========================
    CARD
-======================================= */
+=========================== */
 
 .project-card{
 
-    flex:0 0 calc((100% - 70px)/3);
+    flex:0 0 390px;
 
     background:#1f1f1f;
 
@@ -343,17 +376,19 @@ ABOUT
 
     overflow:hidden;
 
+    scroll-snap-align:start;
+
     transition:.35s;
 
-    box-shadow:0 10px 35px rgba(0,0,0,.28);
+    border:1px solid rgba(255,255,255,.06);
 
 }
 
 .project-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
-    box-shadow:0 30px 60px rgba(0,0,0,.45);
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
 
 }
 
@@ -361,25 +396,21 @@ ABOUT
 
     width:100%;
 
-    display:block;
-
-    height:240px;
+    height:220px;
 
     object-fit:cover;
 
-    transition:.45s;
+    display:block;
 
 }
 
-.project-card:hover img{
+/* ===========================
+   CONTENT
+=========================== */
 
-    transform:scale(1.05);
+.project-body{
 
-}
-
-.project-overlay{
-
-    padding:24px;
+    padding:28px;
 
     display:flex;
 
@@ -389,35 +420,43 @@ ABOUT
 
 }
 
-.industry-badge{
+.industry{
 
     width:max-content;
 
-    padding:7px 15px;
-
-    background:#D4A373;
+    padding:6px 14px;
 
     border-radius:999px;
 
-    color:white;
+    font-size:.8rem;
 
     font-weight:600;
 
-    font-size:.82rem;
+    color:white;
 
 }
 
-.project-overlay h3{
+/* badge colors */
 
-    font-size:1.5rem;
+.hospitality{background:#d4a373;}
+.banking{background:#6f42c1;}
+.healthcare{background:#0d6efd;}
+.hr{background:#198754;}
+.manufacturing{background:#fd7e14;}
+.food{background:#dc3545;}
+.finance{background:#20c997;}
 
-    line-height:1.3;
+.project-body h3{
+
+    font-size:1.45rem;
+
+    margin:0;
 
 }
 
-.project-overlay p{
+.project-body p{
 
-    color:#bdbdbd;
+    color:#b8b8b8;
 
     line-height:1.7;
 
@@ -425,7 +464,7 @@ ABOUT
 
 }
 
-.tools{
+.tags{
 
     display:flex;
 
@@ -435,13 +474,11 @@ ABOUT
 
 }
 
-.tools span{
+.tags span{
 
-    background:#2b2b2b;
+    background:#2d2d2d;
 
-    color:white;
-
-    padding:7px 15px;
+    padding:7px 14px;
 
     border-radius:999px;
 
@@ -449,13 +486,13 @@ ABOUT
 
 }
 
-.view-project{
+.project-body a{
 
     margin-top:auto;
 
-    color:#D4A373;
-
     font-weight:700;
+
+    color:#d4a373;
 
     text-decoration:none;
 
@@ -463,131 +500,41 @@ ABOUT
 
 }
 
-.project-card:hover .view-project{
+.project-body a:hover{
 
-    padding-left:8px;
-
-}
-
-/* =======================================
-   ARROWS
-======================================= */
-
-.slider-arrow{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:58px;
-
-    height:58px;
-
-    border-radius:50%;
-
-    border:none;
-
-    background:rgba(0,0,0,.65);
-
-    color:white;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    z-index:20;
-
-    transition:.3s;
+    transform:translateX(8px);
 
 }
 
-.slider-arrow:hover{
-
-    background:#D4A373;
-
-}
-
-.slider-arrow.left{
-
-    left:-28px;
-
-}
-
-.slider-arrow.right{
-
-    right:-28px;
-
-}
-
-/* =======================================
-   DOTS
-======================================= */
-
-.slider-dots{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:12px;
-
-    margin-top:45px;
-
-}
-
-.slider-dots span{
-
-    width:11px;
-
-    height:11px;
-
-    border-radius:50%;
-
-    background:#555;
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-.slider-dots span.active{
-
-    background:#D4A373;
-
-    transform:scale(1.35);
-
-}
-
-/* =======================================
+/* ===========================
    RESPONSIVE
-======================================= */
+=========================== */
 
 @media(max-width:1200px){
 
-.project-card{
+    .project-card{
 
-flex:0 0 calc((100% - 35px)/2);
+        flex:0 0 340px;
 
-}
+    }
 
 }
 
 @media(max-width:768px){
 
-.project-card{
+    .section-header{
 
-flex:0 0 100%;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
 
-}
+    }
 
-.slider-arrow{
+    .project-card{
 
-display:none;
+        flex:0 0 90%;
 
-}
+    }
 
 }
 
