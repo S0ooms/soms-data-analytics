@@ -282,17 +282,31 @@ padding:25px;
 
 }
 
-/* ===========================
-   Case Navigation
-=========================== */
+/* =====================================================
+   CASE STUDY LAYOUT
+===================================================== */
 
-.case-nav{
+.case-layout{
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.case-sidebar{
 
     position:sticky;
 
-    top:25px;
-
-    margin-bottom:40px;
+    top:30px;
 
     background:#1f2937;
 
@@ -300,42 +314,82 @@ padding:25px;
 
     border-radius:18px;
 
-    padding:25px;
+    padding:30px;
 
 }
 
-.case-nav h3{
+.case-sidebar h3{
 
     color:#d4a373;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
-.case-nav a{
+.case-sidebar a{
 
     display:block;
 
-    color:#cbd5e1;
-
     text-decoration:none;
 
-    padding:10px 0;
+    color:#cbd5e1;
+
+    padding:10px 14px;
+
+    margin-bottom:8px;
+
+    border-radius:8px;
 
     transition:.25s;
 
-    border-left:3px solid transparent;
-
-    padding-left:12px;
-
 }
 
-.case-nav a:hover{
+.case-sidebar a:hover{
+
+    background:#2b3748;
 
     color:white;
 
-    border-left:3px solid #d4a373;
+    padding-left:22px;
 
-    padding-left:18px;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.case-content{
+
+    min-width:0;
+
+}
+
+.case-content section{
+
+    scroll-margin-top:90px;
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+.case-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.case-sidebar{
+
+position:relative;
+
+top:0;
+
+margin-bottom:35px;
+
+}
 
 }
