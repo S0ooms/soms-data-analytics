@@ -6,6 +6,10 @@
 const slider = document.getElementById("projectSlider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+console.log(slider);
+console.log(prevBtn);
+console.log(nextBtn);
+
 
 // Width of one card including gap
 function getScrollAmount() {
