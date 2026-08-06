@@ -1,199 +1,171 @@
-console.log("NEW SCRIPT LOADED");
-const track = document.querySelector(".slider-track");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+// ===============================
+// S.O.M.S Portfolio Slider v2
+// Native Scroll Version
+// ===============================
 
-const cards = document.querySelectorAll(".project-card");
+const slider = document.getElementById("projectSlider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
-let currentIndex = 0;
+// Width of one card including gap
+function getScrollAmount() {
 
-// How many cards are visible at once
-let visibleCards = 3;
+    const card = slider.querySelector(".project-card");
 
-function updateVisibleCards(){
+    const style = window.getComputedStyle(slider);
 
-    if(window.innerWidth < 768){
+    const gap = parseInt(style.columnGap || style.gap) || 28;
 
-        visibleCards = 1;
-
-    }
-
-    else if(window.innerWidth < 1200){
-
-        visibleCards = 2;
-
-    }
-
-    else{
-
-        visibleCards = 3;
-
-    }
+    return card.offsetWidth + gap;
 
 }
 
-updateVisibleCards();
+// Scroll Right
+nextBtn.addEventListener("click", () => {
 
-window.addEventListener("resize",()=>{
+    slider.scrollBy({
 
-    updateVisibleCards();
+        left: getScrollAmount(),
 
-    moveSlider();
+        behavior: "smooth"
 
-});
-
-function moveSlider(animate = true){
-
-    const gap = parseInt(getComputedStyle(track).gap) || 30;
-
-    const cardWidth = cards[0].offsetWidth + gap;
-
-    if(!animate){
-
-        track.style.transition = "none";
-
-    }else{
-
-        track.style.transition =
-            "transform .55s cubic-bezier(.22,.61,.36,1)";
-
-    }
-
-    track.style.transform =
-        `translateX(-${currentIndex * cardWidth}px)`;
-
-}
-
-nextBtn.addEventListener("click",()=>{
-
-    currentIndex++;
-
-    moveSlider();
-
-    if(currentIndex >= cards.length){
-
-        setTimeout(()=>{
-
-            currentIndex = 0;
-
-            moveSlider(false);
-
-        },550);
-
-    }
+    });
 
 });
 
-prevBtn.addEventListener("click",()=>{
+// Scroll Left
+prevBtn.addEventListener("click", () => {
 
-    currentIndex--;
+    slider.scrollBy({
 
-    moveSlider();
+        left: -getScrollAmount(),
 
-    if(currentIndex < 0){
+        behavior: "smooth"
 
-        setTimeout(()=>{
-
-            currentIndex = cards.length - visibleCards;
-
-            moveSlider(false);
-
-        },550);
-
-    }
+    });
 
 });
 
+// ===============================
+// Mouse Drag Support
+// ===============================
 
-// =========================
-// Drag Support
-// =========================
-
-let isDragging = false;
+let isDown = false;
 
 let startX;
 
 let scrollLeft;
 
-const slider = document.querySelector(".slider");
+slider.addEventListener("mousedown", (e) => {
 
-slider.addEventListener("mousedown",(e)=>{
+    isDown = true;
 
-    isDragging = true;
+    slider.style.cursor = "grabbing";
 
-    startX = e.pageX;
+    startX = e.pageX - slider.offsetLeft;
 
-    scrollLeft = currentIndex;
-
-});
-
-slider.addEventListener("mouseleave",()=>{
-
-    isDragging = false;
+    scrollLeft = slider.scrollLeft;
 
 });
 
-slider.addEventListener("mouseup",()=>{
+slider.addEventListener("mouseleave", () => {
 
-    isDragging = false;
+    isDown = false;
+
+    slider.style.cursor = "grab";
 
 });
 
-slider.addEventListener("mousemove",(e)=>{
+slider.addEventListener("mouseup", () => {
 
-    if(!isDragging) return;
+    isDown = false;
+
+    slider.style.cursor = "grab";
+
+});
+
+slider.addEventListener("mousemove", (e) => {
+
+    if (!isDown) return;
 
     e.preventDefault();
 
-    const walk = e.pageX - startX;
+    const x = e.pageX - slider.offsetLeft;
 
-    if(Math.abs(walk) > 80){
+    const walk = (x - startX) * 1.5;
 
-        if(walk < 0){
-
-            nextBtn.click();
-
-        }
-
-        else{
-
-            prevBtn.click();
-
-        }
-
-        isDragging = false;
-
-    }
+    slider.scrollLeft = scrollLeft - walk;
 
 });
 
+// ===============================
+// Mouse Wheel Horizontal Scroll
+// ===============================
 
-// =========================
-// Touch Support
-// =========================
+slider.addEventListener("wheel", (e) => {
 
-let touchStart = 0;
+    e.preventDefault();
 
-slider.addEventListener("touchstart",(e)=>{
+    slider.scrollLeft += e.deltaY;
 
-    touchStart = e.touches[0].clientX;
+}, { passive: false });
 
-});
+// ===============================
+// Keyboard Navigation
+// ===============================
 
-slider.addEventListener("touchend",(e)=>{
+document.addEventListener("keydown", (e) => {
 
-    let touchEnd = e.changedTouches[0].clientX;
-
-    if(touchStart - touchEnd > 70){
+    if (e.key === "ArrowRight") {
 
         nextBtn.click();
 
     }
 
-    else if(touchEnd - touchStart > 70){
+    if (e.key === "ArrowLeft") {
 
         prevBtn.click();
 
     }
+
+});
+
+// ===============================
+// Auto Play
+// ===============================
+
+let autoScroll = setInterval(() => {
+
+    slider.scrollBy({
+
+        left: getScrollAmount(),
+
+        behavior: "smooth"
+
+    });
+
+}, 5000);
+
+// Pause on hover
+
+slider.addEventListener("mouseenter", () => {
+
+    clearInterval(autoScroll);
+
+});
+
+slider.addEventListener("mouseleave", () => {
+
+    autoScroll = setInterval(() => {
+
+        slider.scrollBy({
+
+            left: getScrollAmount(),
+
+            behavior: "smooth"
+
+        });
+
+    }, 5000);
 
 });
