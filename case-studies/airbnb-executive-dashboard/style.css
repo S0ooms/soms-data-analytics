@@ -308,6 +308,12 @@ padding:25px;
 
     top:30px;
 
+    align-self:start;
+
+    max-height:calc(100vh - 60px);
+
+    overflow-y:auto;
+
     background:#1f2937;
 
     border:1px solid #374151;
