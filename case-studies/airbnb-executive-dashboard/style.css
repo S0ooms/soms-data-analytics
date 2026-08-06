@@ -281,3 +281,61 @@ padding:25px;
 }
 
 }
+
+/* ===========================
+   Case Navigation
+=========================== */
+
+.case-nav{
+
+    position:sticky;
+
+    top:25px;
+
+    margin-bottom:40px;
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+.case-nav h3{
+
+    color:#d4a373;
+
+    margin-bottom:20px;
+
+}
+
+.case-nav a{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    padding:10px 0;
+
+    transition:.25s;
+
+    border-left:3px solid transparent;
+
+    padding-left:12px;
+
+}
+
+.case-nav a:hover{
+
+    color:white;
+
+    border-left:3px solid #d4a373;
+
+    padding-left:18px;
+
+}
