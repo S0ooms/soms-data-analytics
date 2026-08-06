@@ -42,9 +42,22 @@ window.addEventListener("resize",()=>{
 
 });
 
-function moveSlider(){
+function moveSlider(animate = true){
 
-    const cardWidth = cards[0].offsetWidth + 30;
+    const gap = parseInt(getComputedStyle(track).gap) || 30;
+
+    const cardWidth = cards[0].offsetWidth + gap;
+
+    if(!animate){
+
+        track.style.transition = "none";
+
+    }else{
+
+        track.style.transition =
+            "transform .55s cubic-bezier(.22,.61,.36,1)";
+
+    }
 
     track.style.transform =
         `translateX(-${currentIndex * cardWidth}px)`;
@@ -53,37 +66,41 @@ function moveSlider(){
 
 nextBtn.addEventListener("click",()=>{
 
-    if(currentIndex < cards.length - visibleCards){
-
-        currentIndex++;
-
-    }
-
-    else{
-
-        currentIndex = 0;
-
-    }
+    currentIndex++;
 
     moveSlider();
+
+    if(currentIndex >= cards.length){
+
+        setTimeout(()=>{
+
+            currentIndex = 0;
+
+            moveSlider(false);
+
+        },550);
+
+    }
 
 });
 
 prevBtn.addEventListener("click",()=>{
 
-    if(currentIndex > 0){
-
-        currentIndex--;
-
-    }
-
-    else{
-
-        currentIndex = cards.length - visibleCards;
-
-    }
+    currentIndex--;
 
     moveSlider();
+
+    if(currentIndex < 0){
+
+        setTimeout(()=>{
+
+            currentIndex = cards.length - visibleCards;
+
+            moveSlider(false);
+
+        },550);
+
+    }
 
 });
 
@@ -98,7 +115,7 @@ let startX;
 
 let scrollLeft;
 
-const slider = document.querySelector(".slider-window");
+const slider = document.querySelector(".slider");
 
 slider.addEventListener("mousedown",(e)=>{
 
