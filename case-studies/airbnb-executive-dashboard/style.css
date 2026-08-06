@@ -304,23 +304,9 @@ padding:25px;
 
 .case-sidebar{
 
-    position:sticky;
-
-    top:30px;
-
-    align-self:start;
-
-    max-height:calc(100vh - 60px);
-
-    overflow-y:auto;
-
-    background:#1f2937;
-
-    border:1px solid #374151;
-
-    border-radius:18px;
-
-    padding:30px;
+position:sticky;
+top:30px;
+align-self:start;
 
 }
 
