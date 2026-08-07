@@ -148,7 +148,7 @@ let autoScroll = setInterval(() => {
 
     });
 
-}, 5000);
+}, 15000);
 
 // Pause on hover
 
