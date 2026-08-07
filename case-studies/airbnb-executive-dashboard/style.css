@@ -30,6 +30,8 @@ body{
 
 .container{
     width:min(1280px,92%);
+    margin:0 auto;
+    padding:60px 40px 100px;
 }
 
 /* ===========================
@@ -293,11 +295,13 @@ padding:25px;
 
 display:grid;
 
-grid-template-columns:240px 1fr;
+grid-template-columns:260px minmax(0,1fr);
 
-gap:60px;
+gap:50px;
 
 align-items:start;
+
+margin-top:20px;
 
 }
 
@@ -309,7 +313,7 @@ align-items:start;
 
 position:sticky;
 
-top:40px;
+top:30px;
 
 align-self:start;
 
@@ -319,9 +323,7 @@ border:1px solid #374151;
 
 border-radius:18px;
 
-padding:32px;
-
-box-shadow:0 20px 45px rgba(0,0,0,.25);
+padding:28px;
 
 height:fit-content;
 
@@ -374,7 +376,9 @@ transition:all .25s ease;
 
 .case-content{
 
-    min-width:0;
+min-width:0;
+
+max-width:900px;
 
 }
 
