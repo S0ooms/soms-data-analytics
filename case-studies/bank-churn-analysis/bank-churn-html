@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>S.O.M.S. | Bank Churn Analysis</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+PAGE HEADER
+===================================================== -->
+
+<header class="page-header">
+
+
+<a href="../../index.html" class="back-btn">
+← Back to Portfolio
+</a>
+
+
+<span class="industry">
+Banking Analytics
+</span>
+
+
+<h1>
+🏦 Bank Churn Analysis
+</h1>
+
+
+<p>
+Customer Retention & Churn Intelligence Case Study
+</p>
+
+
+</header>
+
+
+
+<!-- =====================================================
+CASE STUDY LAYOUT
+===================================================== -->
+
+<div class="case-layout">
+
+
+
+<!-- =====================================================
+SIDEBAR
+===================================================== -->
+
+<aside class="case-sidebar">
+
+
+<h3>
+Contents
+</h3>
+
+
+<a href="#summary">
+Executive Summary
+</a>
+
+
+<a href="#dashboard">
+Dashboard Preview
+</a>
+
+
+<a href="#context">
+Business Context
+</a>
+
+
+<a href="#challenge">
+Business Problem
+</a>
+
+
+<a href="#objectives">
+Objectives
+</a>
+
+
+<a href="#dataset">
+Dataset
+</a>
+
+
+<a href="#approach">
+Analytics
+</a>
+
+
+<a href="#kpis">
+KPIs
+</a>
+
+
+<a href="#findings">
+Insights
+</a>
+
+
+<a href="#recommendations">
+Recommendations
+</a>
+
+
+<a href="#technical">
+Technical
+</a>
+
+
+<a href="#business-value">
+Business Impact
+</a>
+
+
+<a href="#skills">
+Skills
+</a>
+
+
+<a href="#tools">
+Tools
+</a>
+
+
+<a href="#outcome">
+Outcome
+</a>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+MAIN CONTENT
+===================================================== -->
+
+<main class="case-content">
+
+
+
+<!-- =====================================================
+EXECUTIVE SUMMARY
+===================================================== -->
+
+<section id="summary">
+
+
+<h2>
+Executive Summary
+</h2>
+
+
+<p>
+
+This project analyzes customer data from a banking environment
+to identify the key factors associated with customer churn,
+high-risk customer segments, and opportunities to improve
+customer retention.
+
+</p>
+
+
+<p>
+
+Through an interactive Power BI dashboard, customer
+demographics, account behavior, product usage, activity,
+and geographic characteristics are analyzed to transform
+raw customer data into actionable retention insights.
+
+</p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+DASHBOARD PREVIEW
+===================================================== -->
+
+<section id="dashboard">
+
+
+<h2>
+Dashboard Preview
+</h2>
+
+
+<img
+src="dashboard.png"
+alt="Bank Churn Analysis Power BI Dashboard"
+>
+
+
+</section>
+
+
+
+<!-- =====================================================
+BUSINESS CONTEXT
+===================================================== -->
+
+<section id="context">
+
+
+<h2>
+Business Context
+</h2>
+
+
+<p>
+
+Customer retention is a critical challenge for financial
+institutions because acquiring a new customer can require
+significantly more resources than retaining an existing one.
+
+</p>
+
+
+<p>
+
+Understanding which customer characteristics and behaviors
+are associated with churn enables management teams to
+prioritize retention initiatives, improve customer
+engagement, and allocate resources toward higher-risk
+segments.
+
+</p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+BUSINESS PROBLEM
+===================================================== -->
+
+<section id="challenge">
+
+
+<h2>
+Business Problem
+</h2>
+
+
+<p>
+
+The organization needs to understand why customers leave
+and which customer segments demonstrate a higher likelihood
+of churn.
+
+</p>
+
+
+<p>
+
+Without centralized analysis, it can be difficult to identify
+patterns across customer demographics, geography, account
+activity, product usage, and financial characteristics.
+
+</p>
+
+
+<h3>
+Key Business Questions
+</h3>
+
+
+<ul>
+
+<li>
+Which customer segments have the highest churn rates?
+</li>
+
+<li>
+Which customer characteristics are associated with churn?
+</li>
+
+<li>
+Does customer activity influence retention?
+</li>
+
+<li>
+Which geographic markets demonstrate higher churn risk?
+</li>
+
+<li>
+Does the number of products held by a customer relate to churn?
+</li>
+
+<li>
+Which customer segments should receive greater retention attention?
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+OBJECTIVES
+===================================================== -->
+
+<section id="objectives">
+
+
+<h2>
+Project Objectives
+</h2>
+
+
+<ul>
+
+<li>
+Measure overall customer churn performance.
+</li>
+
+<li>
+Identify demographic and behavioral characteristics
+associated with customer churn.
+</li>
+
+<li>
+Compare churn performance across geographic markets.
+</li>
+
+<li>
+Analyze customer activity and product ownership.
+</li>
+
+<li>
+Identify high-risk customer segments.
+</li>
+
+<li>
+Develop an executive-ready Power BI dashboard
+for data-driven retention decisions.
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+DATASET
+===================================================== -->
+
+<section id="dataset">
+
+
+<h2>
+Dataset Overview
+</h2>
+
+
+<p>
+
+The analysis uses a customer banking dataset containing
+10,000 customer records.
+
+</p>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Category
+</th>
+
+<th>
+Fields
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>
+Customer Profile
+</td>
+
+<td>
+Customer ID, Surname, Gender, Age
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Financial Profile
+</td>
+
+<td>
+Credit Score, Balance, Estimated Salary
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Account Information
+</td>
+
+<td>
+Tenure, Number of Products, Credit Card Ownership
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Engagement
+</td>
+
+<td>
+Active Membership
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Geography
+</td>
+
+<td>
+France, Germany, Spain
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Outcome
+</td>
+
+<td>
+Exited / Customer Churn
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+</section>
+
+
+
+<!-- =====================================================
+ANALYTICS APPROACH
+===================================================== -->
+
+<section id="approach">
+
+
+<h2>
+Analytics Approach
+</h2>
+
+
+<p>
+
+The analysis follows a structured Business Intelligence
+workflow from data preparation through executive reporting.
+
+</p>
+
+
+<ol>
+
+<li>
+Data review and quality assessment
+</li>
+
+<li>
+Data preparation and transformation using Power Query
+</li>
+
+<li>
+Data modeling and relationship validation
+</li>
+
+<li>
+KPI development using DAX
+</li>
+
+<li>
+Customer segmentation and comparative analysis
+</li>
+
+<li>
+Interactive visualization using Power BI
+</li>
+
+<li>
+Business interpretation and recommendation development
+</li>
+
+</ol>
+
+
+</section>
+
+
+
+<!-- =====================================================
+KPIs
+===================================================== -->
+
+<section id="kpis">
+
+
+<h2>
+Key Performance Indicators
+</h2>
+
+
+<ul>
+
+<li>
+Total Customers
+</li>
+
+<li>
+Exited Customers
+</li>
+
+<li>
+Customer Churn Rate
+</li>
+
+<li>
+Active Customers
+</li>
+
+<li>
+Inactive Customers
+</li>
+
+<li>
+Average Customer Age
+</li>
+
+<li>
+Average Credit Score
+</li>
+
+<li>
+Average Account Balance
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+INSIGHTS
+===================================================== -->
+
+<section id="findings">
+
+
+<h2>
+Key Insights
+</h2>
+
+
+
+<h3>
+Germany demonstrates the highest churn risk.
+</h3>
+
+
+<p>
+
+Among the three geographic markets, Germany shows the
+highest customer churn rate, indicating a potential need
+for market-specific retention strategies.
+
+</p>
+
+
+
+<h3>
+Older customers demonstrate elevated churn risk.
+</h3>
+
+
+<p>
+
+Customers within the 51–60 age range represent one of the
+highest-risk customer segments, suggesting that retention
+strategies should consider customer life stage and changing
+financial needs.
+
+</p>
+
+
+
+<h3>
+Inactive members are significantly more vulnerable to churn.
+</h3>
+
+
+<p>
+
+Customers who are not classified as active members show
+higher churn behavior than active customers.
+
+</p>
+
+
+<h3>
+Customers with multiple products require closer monitoring.
+</h3>
+
+
+<p>
+
+Customers holding three or more products demonstrate
+elevated churn risk, suggesting that product ownership alone
+does not necessarily translate into stronger customer
+retention.
+
+</p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+RECOMMENDATIONS
+===================================================== -->
+
+<section id="recommendations">
+
+
+<h2>
+Business Recommendations
+</h2>
+
+
+<ul>
+
+<li>
+
+Develop targeted retention campaigns for
+high-risk customer segments.
+
+</li>
+
+
+<li>
+
+Prioritize customer engagement initiatives for
+inactive members.
+
+</li>
+
+
+<li>
+
+Investigate Germany-specific churn drivers and
+develop localized retention strategies.
+
+</li>
+
+
+<li>
+
+Create age-specific engagement programs for
+higher-risk customer groups.
+
+</li>
+
+
+<li>
+
+Review the customer experience of customers holding
+multiple products to identify potential friction points.
+
+</li>
+
+
+<li>
+
+Use the dashboard as an ongoing monitoring tool rather
+than relying solely on periodic churn reporting.
+
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+TECHNICAL
+===================================================== -->
+
+<section id="technical">
+
+
+<h2>
+Technical Highlights
+</h2>
+
+
+<ul>
+
+<li>
+Microsoft Power BI
+</li>
+
+<li>
+Power Query
+</li>
+
+<li>
+DAX Measures
+</li>
+
+<li>
+Data Modeling
+</li>
+
+<li>
+Customer Segmentation
+</li>
+
+<li>
+KPI Development
+</li>
+
+<li>
+Interactive Dashboard Design
+</li>
+
+<li>
+Business Data Storytelling
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+BUSINESS VALUE
+===================================================== -->
+
+<section id="business-value">
+
+
+<h2>
+Business Impact
+</h2>
+
+
+<p>
+
+The dashboard provides management with a centralized view
+of customer churn and enables faster identification of
+high-risk segments.
+
+</p>
+
+
+<p>
+
+By combining demographic, geographic, financial, product,
+and engagement characteristics, decision-makers can move
+from simply measuring churn to understanding where
+retention efforts should be prioritized.
+
+</p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+SKILLS
+===================================================== -->
+
+<section id="skills">
+
+
+<h2>
+Skills Demonstrated
+</h2>
+
+
+<ul>
+
+<li>
+Business Intelligence
+</li>
+
+<li>
+Data Analysis
+</li>
+
+<li>
+Data Visualization
+</li>
+
+<li>
+Customer Segmentation
+</li>
+
+<li>
+KPI Development
+</li>
+
+<li>
+Data Modeling
+</li>
+
+<li>
+Business Storytelling
+</li>
+
+<li>
+Strategic Recommendation Development
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+TOOLS
+===================================================== -->
+
+<section id="tools">
+
+
+<h2>
+Tools Used
+</h2>
+
+
+<ul>
+
+<li>
+Microsoft Power BI
+</li>
+
+<li>
+Power Query
+</li>
+
+<li>
+DAX
+</li>
+
+<li>
+Microsoft Excel
+</li>
+
+</ul>
+
+
+</section>
+
+
+
+<!-- =====================================================
+OUTCOME
+===================================================== -->
+
+<section id="outcome">
+
+
+<h2>
+Project Outcome
+</h2>
+
+
+<p>
+
+This project demonstrates an end-to-end Business Intelligence
+workflow that transforms customer data into an executive-ready
+churn analysis dashboard.
+
+</p>
+
+
+<p>
+
+The resulting solution helps identify high-risk customer
+segments, uncover potential churn drivers, and support
+data-driven customer retention strategies.
+
+</p>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="project-navigation">
+
+
+<a href="../../index.html">
+← Back to Portfolio
+</a>
+
+
+<a href="../airbnb-executive-dashboard/index.html">
+← Previous Project
+</a>
+
+
+<a href="../hospital-er-analysis/index.html">
+Next Project →
+</a>
+
+
+</div>
+
+
+<p>
+
+© 2026 Somel Chan • Brewing Insights. Delivering Impact.
+
+</p>
+
+
+</footer>
+
+
+</div>
+
+
+</body>
+
+</html>
