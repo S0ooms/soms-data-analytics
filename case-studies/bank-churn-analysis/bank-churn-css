@@ -1,0 +1,589 @@
+/* =====================================================
+S.O.M.S. CASE STUDY THEME
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#111827;
+
+    color:#f8fafc;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+CONTAINER
+===================================================== */
+
+.container{
+
+    width:min(1280px,92%);
+
+    margin:0 auto;
+
+    padding:60px 40px 100px;
+
+}
+
+
+
+/* =====================================================
+PAGE HEADER
+===================================================== */
+
+.page-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:36px;
+
+    padding-bottom:35px;
+
+    border-bottom:1px solid #374151;
+
+}
+
+
+.page-header h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+
+.page-header p{
+
+    color:#94a3b8;
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* =====================================================
+INDUSTRY BADGE
+===================================================== */
+
+.industry{
+
+    display:inline-block;
+
+    background:#d4a373;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================================
+BACK TO PORTFOLIO
+===================================================== */
+
+.back-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#d4a373;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.25s ease;
+
+}
+
+
+.back-btn:hover{
+
+    background:#e2b07f;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+
+
+/* =====================================================
+CASE STUDY LAYOUT
+===================================================== */
+
+.case-layout{
+
+    display:grid;
+
+    grid-template-columns:250px minmax(0,1fr);
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+
+
+/* =====================================================
+SIDEBAR
+===================================================== */
+
+.case-sidebar{
+
+    position:sticky;
+
+    top:30px;
+
+    align-self:start;
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:18px;
+
+    padding:28px 22px;
+
+    height:fit-content;
+
+}
+
+
+.case-sidebar h3{
+
+    color:#d4a373;
+
+    margin-bottom:22px;
+
+    font-size:1.15rem;
+
+}
+
+
+.case-sidebar a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    margin-bottom:4px;
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    font-size:.92rem;
+
+    border-left:3px solid transparent;
+
+    border-radius:8px;
+
+    transition:all .25s ease;
+
+}
+
+
+.case-sidebar a:hover{
+
+    background:#2b3748;
+
+    border-left:3px solid #d4a373;
+
+    color:white;
+
+    padding-left:18px;
+
+}
+
+
+
+/* =====================================================
+CONTENT
+===================================================== */
+
+.case-content{
+
+    min-width:0;
+
+    max-width:900px;
+
+}
+
+
+.case-content section{
+
+    scroll-margin-top:90px;
+
+}
+
+
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+section{
+
+    background:#1f2937;
+
+    border:1px solid #374151;
+
+    border-radius:18px;
+
+    padding:34px;
+
+    margin-bottom:35px;
+
+    transition:.3s ease;
+
+}
+
+
+section:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+section h2{
+
+    color:#d4a373;
+
+    margin-bottom:25px;
+
+    font-size:1.7rem;
+
+}
+
+
+section h3{
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+    color:#f8fafc;
+
+}
+
+
+section p{
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* =====================================================
+DASHBOARD IMAGE
+===================================================== */
+
+section img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:12px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+
+}
+
+
+
+/* =====================================================
+LISTS
+===================================================== */
+
+ul,
+ol{
+
+    padding-left:22px;
+
+}
+
+
+li{
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* =====================================================
+TABLE
+===================================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    margin-top:20px;
+
+}
+
+
+th{
+
+    background:#d4a373;
+
+    color:white;
+
+}
+
+
+td,
+th{
+
+    padding:15px;
+
+    border-bottom:1px solid #374151;
+
+    text-align:left;
+
+}
+
+
+tr:nth-child(even){
+
+    background:#273244;
+
+}
+
+
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer{
+
+    margin-top:80px;
+
+    padding:40px 40px 60px;
+
+    border-top:1px solid #374151;
+
+    text-align:center;
+
+}
+
+
+footer p{
+
+    color:#94a3b8;
+
+    margin-top:25px;
+
+}
+
+
+
+/* =====================================================
+PROJECT NAVIGATION
+===================================================== */
+
+.project-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+
+.project-navigation a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#d4a373;
+
+    border:1px solid #374151;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.25s ease;
+
+}
+
+
+.project-navigation a:hover{
+
+    background:#d4a373;
+
+    border-color:#d4a373;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .container{
+
+        width:94%;
+
+        padding:40px 20px 80px;
+
+    }
+
+
+    .case-layout{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+
+    .case-sidebar{
+
+        position:relative;
+
+        top:0;
+
+        margin-bottom:0;
+
+    }
+
+
+    .case-content{
+
+        max-width:none;
+
+    }
+
+}
+
+
+
+@media(max-width:768px){
+
+    .page-header h1{
+
+        font-size:2.1rem;
+
+    }
+
+
+    .page-header p{
+
+        font-size:1rem;
+
+    }
+
+
+    section{
+
+        padding:25px;
+
+    }
+
+
+    section h2{
+
+        font-size:1.5rem;
+
+    }
+
+
+    .project-navigation{
+
+        flex-direction:column;
+
+    }
+
+
+    .project-navigation a{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+}
