@@ -147,9 +147,10 @@ CASE STUDY LAYOUT
 
 .case-layout{
     display:grid;
-    grid-template-columns:250px minmax(0,1fr);
+    grid-template-columns:260px minmax(0,1fr);
     gap:50px;
     align-items:start;
+    margin-top:20px;
 }
 
 
@@ -159,11 +160,8 @@ SIDEBAR
 ===================================================== */
 
 .case-sidebar{
-
     position:sticky;
-
     top:30px;
-
     align-self:start;
 
     background:#1f2937;
@@ -175,27 +173,20 @@ SIDEBAR
     padding:28px 22px;
 
     height:fit-content;
-
 }
 
 
 .case-sidebar h3{
-
     color:#d4a373;
-
     margin-bottom:22px;
-
     font-size:1.15rem;
-
 }
 
 
 .case-sidebar a{
-
     display:block;
 
     padding:9px 12px;
-
     margin-bottom:4px;
 
     text-decoration:none;
@@ -209,7 +200,6 @@ SIDEBAR
     border-radius:8px;
 
     transition:all .25s ease;
-
 }
 
 
@@ -233,6 +223,7 @@ CONTENT
 
 .case-content{
     min-width:0;
+    max-width:900px;
 }
 
 
