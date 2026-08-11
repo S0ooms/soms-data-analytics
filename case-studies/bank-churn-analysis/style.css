@@ -117,38 +117,26 @@ BACK TO PORTFOLIO
 ===================================================== */
 
 .back-btn{
-
     display:inline-flex;
-
     align-items:center;
-
-    justify-content:center;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:#d4a373;
-
-    padding:12px 22px;
-
+    gap:10px;
+    padding:10px 18px;
+    margin-bottom:20px;
+    background:transparent;
+    border:1px solid #374151;
     border-radius:10px;
-
+    color:#cbd5e1;
+    text-decoration:none;
     font-weight:600;
-
-    transition:.25s ease;
-
+    transition:.25s;
 }
 
 
 .back-btn:hover{
-
-    background:#e2b07f;
-
+    background:#d4a373;
+    border-color:#d4a373;
+    color:white;
     transform:translateY(-2px);
-
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-
 }
 
 
