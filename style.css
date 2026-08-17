@@ -279,12 +279,57 @@ ABOUT HEADER
 ABOUT CONTENT
 ========================================== */
 
-.about-content{
+.about-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 55px 55px;
 
-    padding:40px 45px 45px;
+    display: block;
+}
 
-    max-width:1100px;
+.about-content p {
+    margin: 0 0 28px;
 
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    color: #dbe5f5;
+
+    text-align: left;
+}
+
+.about-intro {
+    font-size: 1.15rem !important;
+    font-weight: 500;
+
+    color: #f8fafc !important;
+
+    max-width: 900px;
+
+    margin-bottom: 25px !important;
+}
+
+.about-divider {
+    width: 70px;
+    height: 3px;
+
+    background: #d4a373;
+
+    border-radius: 999px;
+
+    margin: 0 0 30px;
+}
+
+.about-closing {
+    margin-top: 35px !important;
+    padding-top: 25px;
+
+    border-top: 1px solid #374151;
+
+    color: #cbd5e1 !important;
+
+    font-size: 1rem !important;
 }
 
 .about-content p{
