@@ -228,15 +228,12 @@ HERO
 }  
 
 /* ==========================================
-ABOUT
+   ABOUT ME
 ========================================== */
 
 #about h2{
-
     font-size:42px;
-
     margin-bottom:40px;
-
 }
 
 .about-box{
@@ -249,20 +246,21 @@ ABOUT
 
     overflow:hidden;
 
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 
+
 /* ==========================================
-ABOUT HEADER
+   ABOUT HEADER IMAGE
 ========================================== */
 
 .about-header{
 
     width:100%;
 
-    overflow:hidden;
-
     background:#ffffff;
 
+    overflow:hidden;
 }
 
 .about-header img{
@@ -273,123 +271,66 @@ ABOUT HEADER
 
     height:auto;
 
+    max-height:430px;
+
+    object-fit:cover;
+
 }
+
 
 /* ==========================================
-ABOUT CONTENT
+   ABOUT TEXT CONTENT
 ========================================== */
 
-.about-content {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 55px 55px;
+.about-content{
 
-    display: block;
+    padding:45px 55px 50px;
+
+    max-width:1100px;
+
+    margin:0 auto;
 }
 
-.about-content p {
-    margin: 0 0 28px;
 
-    font-size: 1.05rem;
-    line-height: 1.9;
-
-    color: #dbe5f5;
-
-    text-align: left;
-}
-
-.about-intro {
-    font-size: 1.15rem !important;
-    font-weight: 500;
-
-    color: #f8fafc !important;
-
-    max-width: 900px;
-
-    margin-bottom: 25px !important;
-}
-
-.about-divider {
-    width: 70px;
-    height: 3px;
-
-    background: #d4a373;
-
-    border-radius: 999px;
-
-    margin: 0 0 30px;
-}
-
-.about-closing {
-    margin-top: 35px !important;
-    padding-top: 25px;
-
-    border-top: 1px solid #374151;
-
-    color: #cbd5e1 !important;
-
-    font-size: 1rem !important;
-}
+/* NORMAL PARAGRAPHS */
 
 .about-content p{
 
     color:#cbd5e1;
 
+    font-size:18px;
+
     line-height:1.9;
 
-    margin-bottom:25px;
+    margin:0 0 28px 0;
 
-    font-size:17px;
-
+    max-width:950px;
 }
+
+
+/* FIRST / INTRO PARAGRAPH */
+
+.about-content .about-intro{
+
+    color:#f8fafc;
+
+    font-size:21px;
+
+    font-weight:500;
+
+    line-height:1.8;
+
+    margin-bottom:32px;
+}
+
+
+/* LAST PARAGRAPH */
 
 .about-content p:last-child{
 
     margin-bottom:0;
-
 }
 
-.about-intro{
-
-    color:#f8fafc !important;
-
-    font-size:19px !important;
-
-    font-weight:500;
-
-    line-height:1.8 !important;
-
-}
-
-/* ==========================================
-   ABOUT ME PHOTO
-========================================== */
-
-.about-content{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-}
-
-.about-text{
-    flex:1;
-}
-
-.about-photo{
-    flex:0 0 300px;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-}
-
-.about-photo img{
-    width:300px;
-    max-width:100%;
-    height:auto;
-    display:block;
-}
 
 /* ==========================================
    CERTIFICATIONS
