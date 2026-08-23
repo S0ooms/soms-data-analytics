@@ -549,6 +549,42 @@ HERO
 
 }
 
+/* Video preview (used by capstone cards, e.g. Excel capstone) */
+.project-card video{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#000;
+
+}
+
+/* Placeholder block for capstone projects with no media yet */
+.project-placeholder{
+
+    width:100%;
+
+    height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:46px;
+
+    background:#161b28;
+
+    color:#475569;
+
+}
+
 /* ===========================
    CONTENT
 =========================== */
@@ -562,6 +598,17 @@ HERO
     flex-direction:column;
 
     gap:18px;
+
+}
+
+/* Row that holds the industry + status badges side by side */
+.badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
 
 }
 
@@ -590,6 +637,26 @@ HERO
 .manufacturing{background:#fd7e14;}
 .food{background:#dc3545;}
 .finance{background:#20c997;}
+
+/* status badges for capstone project progress */
+
+.status{
+
+    width:max-content;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.status.completed{background:#198754;color:white;}
+.status.ongoing{background:#eab308;color:#111827;}
+.status.not-started{background:#374151;color:#cbd5e1;}
 
 .project-body h3{
 
@@ -648,6 +715,23 @@ HERO
 .project-body a:hover{
 
     transform:translateX(8px);
+
+}
+
+/* Disabled link style for capstone projects not started yet */
+.project-body a.disabled{
+
+    color:#6b7280;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+.project-body a.disabled:hover{
+
+    transform:none;
 
 }
 
