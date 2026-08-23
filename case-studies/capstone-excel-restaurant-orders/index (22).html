@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Excel Capstone: Restaurant Orders Dashboard | Soms</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../../index.html#capstone" class="back-btn">
+← Back to Portfolio
+</a>
+
+<header class="page-header">
+
+    <div class="badges-row">
+        <span class="industry">Food &amp; Beverage Analytics</span>
+        <span class="status completed">Completed</span>
+        <span class="tool-badge">Microsoft Excel</span>
+    </div>
+
+    <h1>
+        🍽️ Restaurant Orders — Sales &amp; Customer Ordering Insights Dashboard
+    </h1>
+
+    <p>
+        Excel Capstone Project — End-to-End Business Intelligence Case Study
+    </p>
+
+</header>
+
+<div class="case-layout">
+
+<aside class="case-sidebar">
+
+    <h3>Contents</h3>
+
+    <a href="#summary">Executive Summary</a>
+
+    <a href="#video">Video Walkthrough</a>
+
+    <a href="#dashboard">Dashboard Preview</a>
+
+    <a href="#context">Business Context</a>
+
+    <a href="#objectives">Objectives</a>
+
+    <a href="#questions">Business Questions</a>
+
+    <a href="#dataset">Dataset &amp; Tools</a>
+
+    <a href="#modeling">Data Modeling</a>
+
+    <a href="#insights">Key Insights</a>
+
+    <a href="#recommendations">Recommendations</a>
+
+    <a href="#impact">Business Impact</a>
+
+    <a href="#technical">Technical Highlights</a>
+
+    <a href="#skills">Skills Demonstrated</a>
+
+    <a href="#outcome">Outcome</a>
+
+</aside>
+
+<main class="case-content">
+
+<section id="summary">
+
+<h2>Executive Summary</h2>
+
+<p>
+    A multi-cuisine restaurant needed a centralized way to understand sales
+    performance across menu items, cuisine types, meal periods, and daily/weekly
+    demand cycles. This project transforms raw order-level data into an
+    interactive, three-tab Excel dashboard built on a proper Power Pivot
+    star-schema data model — enabling management to quickly identify revenue
+    trends, top- and under-performing menu items, cuisine profitability, and
+    peak ordering windows.
+</p>
+
+<div class="stat-grid">
+
+    <div class="stat-card">
+        <div class="value">$159,217.90</div>
+        <div class="label">Total Sales</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="value">12,097</div>
+        <div class="label">Total Orders</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="value">$13.16</div>
+        <div class="label">Avg. Order Value</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="value">2.26</div>
+        <div class="label">Avg. Items / Order</div>
+    </div>
+
+</div>
+
+<h3>My Role</h3>
+
+<p>
+    Data Analyst / Business Intelligence Analyst — responsible for structuring
+    the order-level data into a star-schema data model using Power Query and
+    Power Pivot, writing the DAX measures that power the dashboard, designing
+    the three-tab dashboard layout, identifying key trends and anomalies, and
+    translating findings into actionable business recommendations.
+</p>
+
+</section>
+
+<section id="video">
+
+<h2>Video Walkthrough</h2>
+
+<div class="video-wrap">
+    <video
+        src="preview.mp4"
+        poster="dashboard-overview.png"
+        controls
+        playsinline
+    ></video>
+</div>
+
+</section>
+
+<section id="dashboard">
+
+<h2>Dashboard Preview</h2>
+
+<p>
+    The dashboard follows a narrative, three-tab structure — mirroring the
+    actual navigation built into the Excel file itself.
+</p>
+
+<div class="dashboard-tabs">
+    <button type="button" class="active" data-target="tab-overview">🏠 Overview</button>
+    <button type="button" data-target="tab-menu">📊 Menu Analysis</button>
+    <button type="button" data-target="tab-behaviour">⏱️ Order Behaviour</button>
+</div>
+
+<div class="dashboard-gallery">
+    <img id="tab-overview" class="active" src="dashboard-overview.png" alt="Overview tab — The Big Picture">
+    <img id="tab-menu" src="dashboard-menu.png" alt="Menu Analysis tab — What's Driving It">
+    <img id="tab-behaviour" src="dashboard-order-behaviour.png" alt="Order Behaviour tab — When It Happens">
+</div>
+
+</section>
+
+<section id="context">
+
+<h2>Business Context</h2>
+
+<p>
+    Order-level data existed, but it wasn't organized into a format management
+    could use to make fast, confident decisions. The goal of this project was
+    to turn that raw order data into an interactive Excel dashboard that
+    surfaces revenue trends, top- and under-performing menu items, cuisine
+    profitability, and peak ordering windows at a glance.
+</p>
+
+</section>
+
+<section id="objectives">
+
+<h2>Project Objectives</h2>
+
+<p>
+    Develop an interactive, three-tab sales dashboard that answers key
+    operational and commercial questions and supports data-driven decisions
+    around:
+</p>
+
+<ul>
+    <li>Revenue and order volume trends</li>
+    <li>Menu item performance (volume vs. revenue)</li>
+    <li>Cuisine-type profitability</li>
+    <li>Meal-period and hourly demand patterns</li>
+    <li>Menu optimization opportunities</li>
+    <li>Staffing and inventory alignment</li>
+</ul>
+
+</section>
+
+<section id="questions">
+
+<h2>Business Questions</h2>
+
+<p>
+    The dashboard was designed around practical questions a restaurant
+    operations or commercial manager would typically ask.
+</p>
+
+<div class="question-card">
+    <h3>1. Is sales performance stable, or is it fluctuating in ways that need attention?</h3>
+    <p>Daily and weekly trends were analyzed to identify the overall demand pattern and flag any unusual dips or spikes.</p>
+</div>
+
+<div class="question-card">
+    <h3>2. Which menu items actually drive revenue, versus which simply drive order volume?</h3>
+    <p>Total orders and total sales were compared at the item level to separate high-volume/low-ticket items from high-ticket revenue drivers.</p>
+</div>
+
+<div class="question-card">
+    <h3>3. Which cuisine type delivers the strongest average order value?</h3>
+    <p>Average order value was compared across American, Mexican, Asian, and Italian cuisines to identify where ticket size — not just order count — is highest.</p>
+</div>
+
+<div class="question-card">
+    <h3>4. When do customers order the most?</h3>
+    <p>Orders and sales were broken down by meal period and by hour of day to identify peak demand windows and staffing implications.</p>
+</div>
+
+<div class="question-card">
+    <h3>5. Where is the menu underperforming, and where can it be optimized?</h3>
+    <p>A Pareto (80/20) analysis was used to identify which items are essential to keep and which are candidates for pruning or repositioning.</p>
+</div>
+
+<div class="question-card">
+    <h3>6. Which cuisine and menu combination should be prioritized for growth?</h3>
+    <p>Order-share and sales-share were compared across cuisines to identify where volume and revenue leadership diverge, and where the biggest growth opportunity sits.</p>
+</div>
+
+</section>
+
+<section id="dataset">
+
+<h2>Dataset &amp; Tools Overview</h2>
+
+<table>
+
+<tr>
+    <th>Category</th>
+    <th>Details</th>
+</tr>
+
+<tr>
+    <td>Industry</td>
+    <td>Food &amp; Beverage / Restaurant Operations</td>
+</tr>
+
+<tr>
+    <td>Primary Tool</td>
+    <td>Microsoft Excel</td>
+</tr>
+
+<tr>
+    <td>Data Preparation</td>
+    <td>Power Query</td>
+</tr>
+
+<tr>
+    <td>Data Model</td>
+    <td>Power Pivot (star schema)</td>
+</tr>
+
+<tr>
+    <td>Calculations</td>
+    <td>DAX Measures</td>
+</tr>
+
+<tr>
+    <td>Scope</td>
+    <td>Jan–Mar 2023, 12,097 order-line records</td>
+</tr>
+
+</table>
+
+</section>
+
+<section id="modeling">
+
+<h2>Data Modeling: Power Query &amp; Power Pivot</h2>
+
+<p>
+    Beyond dashboard visuals, the project was built on a proper relational
+    data model rather than a single flat table — reflecting standard business
+    intelligence practice.
+</p>
+
+<h3>Power Pivot Data Model</h3>
+
+<p>
+    A star-schema data model was built in Power Pivot, connecting one central
+    fact table (<strong>f_order</strong>) to two supporting dimension tables
+    (<strong>d_menu</strong> and <strong>d_calendar</strong>), with a dedicated
+    <strong>_measures</strong> table holding all DAX calculations — including
+    Total_Orders, Avg_Order_Value, Total_Sales, Cumulative Order %, and
+    Pareto 80%.
+</p>
+
+<img src="power-pivot-model.png" alt="Power Pivot data model showing star schema with f_order fact table related to d_menu and d_calendar dimension tables">
+
+<h3>Power Query (ETL / Data Preparation)</h3>
+
+<p>
+    Raw order-level data was cleaned and shaped in Power Query before being
+    loaded into the data model — promoting headers, correcting data types,
+    filtering out invalid rows, extracting Start of Hour from each order's
+    timestamp, and building a conditional column to bucket each order into a
+    meal period (Late Breakfast, Lunch, Afternoon, Dinner, or Late Night).
+</p>
+
+<img src="power-query-editor.png" alt="Power Query editor showing applied steps including type conversion, filtering, and a conditional meal-period column">
+
+</section>
+
+<section id="insights">
+
+<h2>Key Insights</h2>
+
+<div class="insight-card">
+    <h3>1. Revenue is steady overall, but weekly volatility needs monitoring</h3>
+    <p>
+        Total sales reached $159,217.90 across 12,097 orders (AOV $13.16).
+        Daily sales ranged from a high of $2,396.35 (Feb 1, 2023) to a low of
+        $1,016.90 (Mar 22, 2023), and weekly sales variance swung from
+        +$1,192 to –$1,533 across the quarter. The Mar 19–22 period shows the
+        sharpest dip of the quarter, with no clear day-of-week pattern to
+        explain it.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> The business shows healthy underlying
+        demand, but the size of the weekly swings suggests performance is more
+        reactive to short-term factors than to steady organic growth — worth
+        tracking against controllable variables like staffing and promotions.
+    </div>
+</div>
+
+<div class="insight-card">
+    <h3>2. Order volume leaders and revenue leaders are two different groups of items</h3>
+    <p>
+        The top 5 items by order count (Hamburger, Edamame, Korean Beef Bowl,
+        Cheeseburger, French Fries) are largely low-to-mid ticket items, while
+        the top 5 items by revenue (Korean Beef Bowl $10.55K, Chicken Parmesan
+        $6.53K, Pork Ramen $6.46K, Meat Lasagna $4.90K, Shrimp Scampi $4.77K)
+        are premium entrées. Korean Beef Bowl alone outsells the bottom 15
+        menu items combined.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> High-volume items are functioning
+        as traffic drivers rather than profit drivers — a bundling and
+        upselling opportunity, not a menu weakness.
+    </div>
+</div>
+
+<div class="insight-card">
+    <h3>3. The menu follows a classic 80/20 (Pareto) pattern</h3>
+    <p>
+        Roughly 20 of the approximately 40 menu items generate close to 80%
+        of total order volume, with a long tail of items contributing
+        disproportionately little.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> Menu complexity could likely be
+        reduced with minimal revenue impact, simplifying kitchen operations,
+        inventory, and prep.
+    </div>
+</div>
+
+<div class="insight-card">
+    <h3>4. Cuisine type drives ticket size more than it drives order volume</h3>
+    <p>
+        Italian has the highest average order value ($16.78) despite not
+        leading in order count, while American has the lowest ($10.33) —
+        Mexican and Asian sit in between at $11.82 and $13.46.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> Cuisine type is a clearer
+        profitability lever than item-level promotion alone. Italian is the
+        strongest candidate for AOV-focused upselling and bundling.
+    </div>
+</div>
+
+<div class="insight-card">
+    <h3>5. Lunch is the dominant demand window</h3>
+    <p>
+        Lunch accounts for 4,173 orders — 34% of total volume and more than
+        double dinner (3,246) — with clear peak activity between 12–2 PM.
+        Late Breakfast and Late Night combined represent only about 13% of
+        orders despite spanning roughly half the restaurant's operating hours.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> Staffing, prep, and inventory
+        should be weighted toward the lunch window, while late-breakfast and
+        late-night periods represent a real, testable demand gap.
+    </div>
+</div>
+
+<div class="insight-card">
+    <h3>6. Cuisine order-share and sales-share tell different stories</h3>
+    <p>
+        Asian cuisine leads in order volume (28.68% share), but Italian leads
+        in sales (31.07% / $49,462.70) — driven entirely by Italian's higher
+        AOV rather than higher demand.
+    </p>
+    <div class="takeaway">
+        <strong>Business takeaway:</strong> Italian's high AOV, lunch-hour
+        concentration, and a small core of premium items are the three
+        levers behind the $159.2K total — and the clearest starting point
+        for a revenue-growth strategy.
+    </div>
+</div>
+
+</section>
+
+<section id="recommendations">
+
+<h2>Business Recommendations</h2>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>1. Use High-Volume Items to Drive Traffic, Then Upsell</h3>
+        <span class="priority high">High Priority</span>
+    </div>
+    <p>
+        Bundle high-volume items (Hamburger, Edamame, Cheeseburger, French
+        Fries) with premium entrées, use combo pricing to migrate
+        volume-driven customers toward higher-ticket dishes, and feature
+        high-margin items alongside high-traffic items on menus and displays.
+    </p>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>2. Promote Italian Cuisine to Lift Average Order Value</h3>
+        <span class="priority high">High Priority</span>
+    </div>
+    <p>
+        Feature Italian dishes in upsell prompts and staff recommendations,
+        test Italian-focused promotions during slower periods, and expand
+        the Italian menu selection where kitchen capacity allows.
+    </p>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>3. Streamline the Menu Using the Pareto Findings</h3>
+        <span class="priority medium">Medium Priority</span>
+    </div>
+    <p>
+        Evaluate bottom-performing items (e.g., Chicken Tacos, Potstickers,
+        Cheese Lasagna) for removal or repositioning, confirm decisions
+        against margin data, and reduce prep/inventory complexity tied to
+        rarely-ordered items.
+    </p>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>4. Align Staffing and Inventory to the Lunch Peak</h3>
+        <span class="priority high">High Priority</span>
+    </div>
+    <p>
+        Schedule peak staffing coverage specifically for the 12–2 PM window,
+        pre-stage high-volume ingredients ahead of the lunch rush, and
+        review whether current staffing already reflects this imbalance.
+    </p>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>5. Test Demand-Building Promotions in Off-Peak Windows</h3>
+        <span class="priority medium">Medium Priority</span>
+    </div>
+    <p>
+        Pilot targeted promotions or limited-time offers during late
+        breakfast and late night, measure incremental order lift, and
+        consider bundling off-peak promotions with Italian or other
+        high-AOV items.
+    </p>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-head">
+        <h3>6. Investigate the Mar 19–22 Revenue Dip</h3>
+        <span class="priority medium">Medium Priority</span>
+    </div>
+    <p>
+        Cross-check against staffing schedules, weather events, or local
+        events during that window, and determine whether the dip is a
+        one-time anomaly or an early signal of a recurring pattern.
+    </p>
+</div>
+
+</section>
+
+<section id="impact">
+
+<h2>Impact / Value</h2>
+
+<p>
+    This dashboard transforms raw order-level data into a management-ready
+    sales intelligence tool.
+</p>
+
+<div class="impact-grid">
+
+    <div class="impact-col">
+        <h3>What is happening</h3>
+        <ul>
+            <li>$159,217.90 in sales across 12,097 orders, steady demand but notable weekly swings</li>
+            <li>Order volume and revenue leaders are two distinct groups of items</li>
+            <li>Italian drives the highest ticket size; Asian drives the highest order volume</li>
+            <li>Lunch is the dominant demand window, more than double dinner</li>
+            <li>The menu follows a Pareto 80/20 pattern</li>
+        </ul>
+    </div>
+
+    <div class="impact-col">
+        <h3>Why it matters</h3>
+        <ul>
+            <li>Revenue is concentrated in a small core of premium items</li>
+            <li>High-volume, low-ticket items are an under-leveraged upsell opportunity</li>
+            <li>Staffing/inventory misaligned to lunch risks service quality and waste</li>
+            <li>Menu complexity beyond the core 20 items adds cost without proportional return</li>
+        </ul>
+    </div>
+
+    <div class="impact-col">
+        <h3>What to do next</h3>
+        <ul>
+            <li>Bundle high-volume items with premium entrées</li>
+            <li>Prioritize Italian-cuisine promotion and expansion</li>
+            <li>Streamline the menu around Pareto-identified core items</li>
+            <li>Align staffing and inventory to the lunch peak</li>
+            <li>Pilot off-peak promotions; investigate the Mar 19–22 anomaly</li>
+        </ul>
+    </div>
+
+</div>
+
+<h3>Portfolio Impact Statement</h3>
+
+<div class="portfolio-desc">
+    This project demonstrates how Excel can be used not only to visualize
+    restaurant sales data, but also to convert order-level transaction data
+    into actionable commercial and operational strategy. The dashboard
+    provides management with a single interactive view of $159.2K in revenue
+    across menu items, cuisine types, meal periods, and daily/weekly trends —
+    reducing the need to manually reconcile separate reports and enabling
+    faster, more confident decisions.
+</div>
+
+</section>
+
+<section id="technical">
+
+<h2>Technical Highlights</h2>
+
+<p>Excel features and techniques used throughout this capstone:</p>
+
+<div class="tech-tags">
+    <span>Power Query (ETL)</span>
+    <span>Power Pivot / Data Model</span>
+    <span>DAX Measures</span>
+    <span>Star-Schema Data Modeling</span>
+    <span>Excel Tables</span>
+    <span>PivotTables</span>
+    <span>PivotCharts</span>
+    <span>Slicers</span>
+    <span>Conditional Formatting</span>
+    <span>Pareto (80/20) Analysis</span>
+    <span>Variance Analysis</span>
+    <span>Top N / Ranking</span>
+    <span>Multi-Tab Dashboard Navigation</span>
+    <span>Interactive Filtering</span>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills Demonstrated</h2>
+
+<p>
+    This project demonstrates the ability to move from
+    <strong>Raw Order Data → Analysis → Insight → Recommendation → Business
+    Decision</strong>.
+</p>
+
+<div class="tech-tags">
+    <span>Microsoft Excel</span>
+    <span>Power Query</span>
+    <span>Power Pivot</span>
+    <span>DAX</span>
+    <span>Data Modeling</span>
+    <span>PivotTables</span>
+    <span>PivotCharts</span>
+    <span>Slicers</span>
+    <span>Dashboard Development</span>
+    <span>Sales Analytics</span>
+    <span>Business Intelligence</span>
+    <span>Data Visualization</span>
+    <span>Trend Analysis</span>
+    <span>Pareto Analysis</span>
+    <span>Menu Analysis</span>
+    <span>Business Insights</span>
+    <span>Data Storytelling</span>
+</div>
+
+</section>
+
+<section id="outcome">
+
+<h2>Project Outcome</h2>
+
+<p>
+    This project demonstrates an end-to-end Business Intelligence workflow —
+    from structuring raw order data into a star-schema model, through DAX
+    measure development, to a three-tab dashboard that turns $159.2K in
+    restaurant revenue into a clear, actionable growth strategy centered on
+    menu optimization, cuisine-focused upselling, staffing alignment, and
+    off-peak demand testing.
+</p>
+
+</section>
+
+</main>
+
+</div>
+
+<footer>
+
+<div class="project-navigation">
+
+<a href="../../index.html#capstone">
+    ← Back to Capstone Projects
+</a>
+
+</div>
+
+<p>
+    © 2026 Somel Chan • Brewing Insights. Delivering Impact.
+</p>
+
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll(".dashboard-tabs button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+
+        document.querySelectorAll(".dashboard-tabs button").forEach(function (b) {
+            b.classList.remove("active");
+        });
+        btn.classList.add("active");
+
+        document.querySelectorAll(".dashboard-gallery img").forEach(function (img) {
+            img.classList.remove("active");
+        });
+        document.getElementById(btn.dataset.target).classList.add("active");
+
+    });
+});
+</script>
+
+</body>
+
+</html>
