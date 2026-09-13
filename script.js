@@ -146,5 +146,5 @@ document.addEventListener("keydown", (e) => {
 // Initialize both sliders
 // ===============================
 
-setupSlider("projectSlider", "prevBtn", "nextBtn");
-setupSlider("capstoneSlider", "prevBtnCapstone", "nextBtnCapstone");
+setupSlider("projectSlider", "prevBtn", "nextBtn", 60000); 
+setupSlider("capstoneSlider", "prevBtnCapstone", "nextBtnCapstone", 60000);
