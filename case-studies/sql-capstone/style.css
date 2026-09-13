@@ -1,7 +1,7 @@
-/* ===========================
-   S.O.M.S. Case Study Theme
-   v2 - adds capstone components
-=========================== */
+/* ==========================================
+   S.O.M.S. Analytics Portfolio
+   Version 2.0
+========================================== */
 
 *{
     margin:0;
@@ -17,99 +17,639 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:#111827;
-
-    color:#f8fafc;
-
-    line-height:1.8;
-
-}
-
-/* ===========================
-   Container
-=========================== */
-
-.container{
-    width:min(1280px,92%);
-    margin:0 auto;
-    padding:60px 40px 100px;
-}
-
-/* ===========================
-   PAGE HEADER
-=========================== */
-
-.page-header{
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-    gap:18px;
-
-    margin-bottom:36px;
-
-    padding-bottom:35px;
-
-    border-bottom:1px solid #374151;
-
-}
-
-.page-header h1{
-
-    font-size:3rem;
-    font-weight:700;
-    line-height:1.2;
-
-}
-
-.page-header p{
-
-    color:#94a3b8;
-    font-size:1.1rem;
-
-}
-
-.industry{
-
-    display:inline-block;
-
-    background:#d4a373;
+    background:#0f172a;
 
     color:white;
 
-    padding:8px 18px;
-
-    border-radius:999px;
-
-    font-size:.85rem;
-
-    font-weight:600;
+    display:flex;
 
 }
 
-/* Row that holds multiple badges (industry + status + tool) */
-.badges-row{
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#c08457;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#d4a373;
+
+}
+
+/* ==========================================
+SIDEBAR
+========================================== */
+
+.sidebar{
+
+    width:260px;
+
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    background:#111827;
+
+    padding:45px 30px;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo h1{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.logo p{
+
+    color:#c08457;
+
+    line-height:1.6;
+
+    margin-bottom:50px;
+
+}
+
+.sidebar nav{
 
     display:flex;
 
-    flex-wrap:wrap;
+    flex-direction:column;
 
-    gap:12px;
+    gap:20px;
+
+}
+
+.sidebar nav a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.30s;
+
+}
+
+.sidebar nav a:hover{
+
+    color:#ffffff;
+
+    transform:translateX(6px);
+
+}
+
+/* ==========================================
+MAIN
+========================================== */
+
+main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+}
+
+section{
+
+    padding:90px 8%;
+
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+#hero{
+
+    min-height:100vh;
+
+    display:flex;
 
     align-items:center;
 
 }
 
-.status{
+.hero-text h3{
+
+    color:#c08457;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h1{
+
+    font-size:70px;
+
+    margin-bottom:10px;
+
+}
+
+.hero-text h2{
+
+    font-size:38px;
+
+    color:#e2e8f0;
+
+    line-height:1.4;
+
+    margin-bottom:30px;
+
+}
+
+.hero-text p{
+
+    max-width:720px;
+
+    color:#94a3b8;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}
+
+.btn{
 
     display:inline-block;
 
-    padding:8px 18px;
+    background:#c08457;
+
+    color:white;
+
+    padding:18px 40px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    transition:.30s;
+
+}
+
+.btn:hover{
+
+    background:#d4a373;
+
+    transform:translateY(-3px);
+
+}  
+
+/* ==========================================
+   ABOUT ME
+========================================== */
+
+#about h2{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.about-box{
+
+    width:100%;
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ==========================================
+   ABOUT HEADER IMAGE
+========================================== */
+
+.about-header{
+
+    width:100%;
+
+    background:#ffffff;
+
+    overflow:hidden;
+}
+
+.about-header img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    max-height:430px;
+
+    object-fit:cover;
+
+}
+
+
+/* ==========================================
+   ABOUT TEXT CONTENT
+========================================== */
+
+.about-content{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:50px 65px 55px;
+
+    display:block;
+
+}
+
+
+/* NORMAL PARAGRAPHS */
+
+.about-content p{
+
+    display:block;
+
+    width:100%;
+
+    max-width:1100px;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin:0 0 28px 0;
+
+}
+
+
+/* FIRST / INTRO PARAGRAPH */
+
+.about-content .about-intro{
+
+    display:block;
+
+    width:100%;
+
+    max-width:1100px;
+
+    color:#f8fafc;
+
+    font-size:21px;
+
+    font-weight:500;
+
+    line-height:1.8;
+
+    margin:0 0 32px 0;
+
+}
+
+
+/* LAST PARAGRAPH */
+
+.about-content p:last-child{
+
+    margin-bottom:0;
+}
+
+
+/* ==========================================
+   CERTIFICATIONS
+========================================== */
+
+#certifications h2{
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.certifications-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.certificate-card{
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+.certificate-card img{
+    width:100%;
+    height:auto;
+    display:block;
+    cursor:pointer;
+}
+
+.certificate-info{
+    padding:22px;
+}
+
+.certificate-info h3{
+    font-size:1.15rem;
+    margin-bottom:8px;
+}
+
+.certificate-info p{
+    color:#cbd5e1;
+    margin-bottom:5px;
+}
+
+.certificate-info span{
+    color:#94a3b8;
+    font-size:.9rem;
+}
+
+/* ===========================
+   FEATURED PROJECTS
+=========================== */
+
+.projects-section{
+
+    width:min(1400px,92%);
+    margin:0 auto;
+    padding:80px 0;
+
+}
+
+.section-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+
+}
+
+.section-header h2{
+
+    font-size:2rem;
+    margin-bottom:8px;
+
+}
+
+.section-header p{
+
+    color:#9ca3af;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.slider-controls{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.slider-btn{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#1f2937;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.25s;
+
+}
+
+.slider-btn:hover{
+
+    background:#d4a373;
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   SCROLLER
+=========================== */
+
+.project-slider{
+
+    display:flex;
+
+    gap:28px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+    padding-bottom:10px;
+
+}
+
+.project-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.project-card{
+
+    flex:0 0 390px;
+
+    background:#1f1f1f;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    scroll-snap-align:start;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.project-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* Video preview (used by capstone cards, e.g. Excel capstone) */
+.project-card video{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:#000;
+
+}
+
+/* Placeholder block for capstone projects with no media yet */
+.project-placeholder{
+
+    width:100%;
+
+    height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:46px;
+
+    background:#161b28;
+
+    color:#475569;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.project-body{
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* Row that holds the industry + status badges side by side */
+.badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.industry{
+
+    width:max-content;
+
+    padding:6px 14px;
 
     border-radius:999px;
 
-    font-size:.85rem;
+    font-size:.8rem;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+/* badge colors */
+
+.hospitality{background:#d4a373;}
+.banking{background:#6f42c1;}
+.healthcare{background:#0d6efd;}
+.hr{background:#198754;}
+.manufacturing{background:#fd7e14;}
+.food{background:#dc3545;}
+.finance{background:#20c997;}
+.ecommerce{background:#e11d48;}
+
+/* status badges for capstone project progress */
+
+.status{
+
+    width:max-content;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
 
     font-weight:600;
 
@@ -119,801 +659,25 @@ body{
 .status.ongoing{background:#eab308;color:#111827;}
 .status.not-started{background:#374151;color:#cbd5e1;}
 
-.tool-badge{
+.project-body h3{
 
-    display:inline-block;
-
-    background:transparent;
-
-    border:1px solid #374151;
-
-    color:#cbd5e1;
-
-    padding:7px 17px;
-
-    border-radius:999px;
-
-    font-size:.85rem;
-
-    font-weight:600;
-
-}
-
-/* ===========================
-   Back Button
-=========================== */
-
-.back-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:10px;
-
-padding:10px 18px;
-
-margin-bottom:20px;
-
-background:transparent;
-
-border:1px solid #374151;
-
-border-radius:10px;
-
-color:#cbd5e1;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.25s;
-
-}
-
-.back-btn:hover{
-
-background:#d4a373;
-
-border-color:#d4a373;
-
-color:white;
-
-transform:translateY(-2px);
-
-}
-
-/* ===========================
-   Sections
-=========================== */
-
-section{
-
-    background:#1f2937;
-
-    border:1px solid #374151;
-
-    border-radius:18px;
-
-    padding:34px;
-
-    margin-bottom:35px;
-
-}
-
-section h2{
-
-    color:#d4a373;
-
-    margin-bottom:25px;
-
-    font-size:1.7rem;
-
-}
-
-section h3{
-
-    margin-top:25px;
-
-    margin-bottom:10px;
-
-}
-
-/* ===========================
-   Dashboard
-=========================== */
-
-section img{
-
-    width:100%;
-
-    border-radius:12px;
-
-   box-shadow:0 18px 40px rgba(0,0,0,.45);
-
-}
-
-/* ===========================
-   Lists
-=========================== */
-
-ul{
-
-    padding-left:22px;
-
-}
-
-li{
-
-    margin-bottom:12px;
-
-}
-
-/* ===========================
-   Table
-=========================== */
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    overflow:hidden;
-
-    border-radius:10px;
-
-}
-
-th{
-
-    background:#d4a373;
-
-    color:white;
-
-}
-
-td,th{
-
-    padding:15px;
-
-    border-bottom:1px solid #374151;
-
-    text-align:left;
-
-}
-
-tr:nth-child(even){
-
-    background:#273244;
-
-}
-
-/* ===========================
-   Footer
-=========================== */
-
-footer{
-
-    margin-top:80px;
-
-    padding-top:40px;
-
-    border-top:1px solid #374151;
-
-    text-align:center;
-
-}
-
-/* ===========================
-   Hover Animation
-=========================== */
-
-section{
-
-    transition:.3s;
-
-}
-
-section:hover{
-
-    transform:translateY(-4px);
-
-}
-
-/* ===========================
-   Responsive
-=========================== */
-
-@media(max-width:768px){
-
-.page-header h1{
-
-font-size:2rem;
-
-}
-
-.container{
-
-width:92%;
-
-}
-
-section{
-
-padding:25px;
-
-}
-
-}
-
-/* =====================================================
-   CASE STUDY LAYOUT
-===================================================== */
-
-.case-layout{
-
-display:grid;
-
-grid-template-columns:260px minmax(0,1fr);
-
-gap:50px;
-
-align-items:start;
-
-margin-top:20px;
-
-}
-
-/* =====================================================
-   SIDEBAR
-===================================================== */
-
-.case-sidebar{
-
-position:sticky;
-
-top:30px;
-
-align-self:start;
-
-background:#1f2937;
-
-border:1px solid #374151;
-
-border-radius:18px;
-
-padding:28px;
-
-height:fit-content;
-
-max-height:calc(100vh - 60px);
-
-overflow-y:auto;
-
-}
-
-.case-sidebar h3{
-
-    color:#d4a373;
-
-    margin-bottom:25px;
-
-}
-
-.case-sidebar a{
-
-display:block;
-
-padding:9px 14px;
-margin-bottom:4px;
-
-text-decoration:none;
-
-color:#cbd5e1;
-
-font-size:.95rem;
-
-border-left:3px solid transparent;
-
-border-radius:8px;
-
-transition:all .25s ease;
-
-}
-
-.case-sidebar a:hover{
-
-    background:#2b3748;
-
-    border-left:3px solid #d4a373;
-
-    color:white;
-
-    padding-left:22px;
-
-}
-
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.case-content{
-
-min-width:0;
-
-max-width:900px;
-
-}
-
-.case-content section{
-
-    scroll-margin-top:90px;
-
-}
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:900px){
-
-.case-layout{
-
-grid-template-columns:1fr;
-
-}
-
-.case-sidebar{
-
-position:relative;
-
-top:0;
-
-margin-bottom:35px;
-
-max-height:none;
-
-}
-
-}
-.project-navigation{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    margin-top:25px;
-
-}
-
-.project-navigation a{
-
-    text-decoration:none;
-
-    color:#d4a373;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.project-navigation a:hover{
-
-    color:white;
-
-}
-
-/* =====================================================
-   KPI STAT STRIP (Executive Summary)
-===================================================== */
-
-.stat-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-
-    gap:16px;
-
-    margin-top:24px;
-
-}
-
-.stat-card{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    border-radius:14px;
-
-    padding:20px 16px;
-
-    text-align:center;
-
-    transition:.25s;
-
-}
-
-.stat-card:hover{
-
-    border-color:#d4a373;
-
-    transform:translateY(-3px);
-
-}
-
-.stat-card .value{
-
-    font-size:1.55rem;
-
-    font-weight:700;
-
-    color:#d4a373;
-
-}
-
-.stat-card .label{
-
-    font-size:.8rem;
-
-    color:#94a3b8;
-
-    margin-top:6px;
-
-}
-
-/* =====================================================
-   VIDEO WALKTHROUGH
-===================================================== */
-
-.video-wrap{
-
-    border-radius:14px;
-
-    overflow:hidden;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-
-    background:#000;
-
-}
-
-.video-wrap video{
-
-    width:100%;
-
-    display:block;
-
-}
-
-/* =====================================================
-   DASHBOARD TAB GALLERY
-===================================================== */
-
-.dashboard-tabs{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-
-    margin-bottom:22px;
-
-}
-
-.dashboard-tabs button{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    color:#cbd5e1;
-
-    padding:12px 20px;
-
-    border-radius:10px;
-
-    font-family:inherit;
-
-    font-size:.9rem;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-}
-
-.dashboard-tabs button:hover{
-
-    border-color:#d4a373;
-
-    color:white;
-
-}
-
-.dashboard-tabs button.active{
-
-    background:#d4a373;
-
-    border-color:#d4a373;
-
-    color:#111827;
-
-}
-
-.dashboard-gallery img{
-
-    display:none;
-
-}
-
-.dashboard-gallery img.active{
-
-    display:block;
-
-}
-
-/* =====================================================
-   BUSINESS QUESTIONS
-===================================================== */
-
-.question-card{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    border-radius:14px;
-
-    padding:20px 24px;
-
-    margin-bottom:16px;
-
-}
-
-.question-card:last-child{
-
-    margin-bottom:0;
-
-}
-
-.question-card h3{
-
-    margin-top:0;
-
-    color:#f8fafc;
-
-    font-size:1.05rem;
-
-}
-
-.question-card p{
-
-    color:#94a3b8;
-
-    margin-top:8px;
-
-}
-
-/* =====================================================
-   KEY INSIGHTS
-===================================================== */
-
-.insight-card{
-
-    margin-bottom:30px;
-
-    padding-bottom:30px;
-
-    border-bottom:1px solid #374151;
-
-}
-
-.insight-card:last-child{
-
-    margin-bottom:0;
-
-    padding-bottom:0;
-
-    border-bottom:none;
-
-}
-
-.insight-card h3{
-
-    margin-top:0;
-
-    color:#f8fafc;
-
-}
-
-.takeaway{
-
-    background:#161b28;
-
-    border-left:4px solid #d4a373;
-
-    padding:14px 20px;
-
-    border-radius:8px;
-
-    margin-top:14px;
-
-    color:#cbd5e1;
-
-    font-size:.95rem;
-
-}
-
-.takeaway strong{
-
-    color:#d4a373;
-
-}
-
-/* =====================================================
-   RECOMMENDATIONS
-===================================================== */
-
-.recommendation-card{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    border-radius:14px;
-
-    padding:24px;
-
-    margin-bottom:18px;
-
-}
-
-.recommendation-card:last-child{
-
-    margin-bottom:0;
-
-}
-
-.recommendation-head{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:10px;
-
-}
-
-.recommendation-head h3{
+    font-size:1.45rem;
 
     margin:0;
 
-    color:#f8fafc;
+}
+
+.project-body p{
+
+    color:#b8b8b8;
+
+    line-height:1.7;
+
+    min-height:90px;
 
 }
 
-.priority{
-
-    display:inline-block;
-
-    padding:5px 14px;
-
-    border-radius:999px;
-
-    font-size:.7rem;
-
-    font-weight:700;
-
-    letter-spacing:.04em;
-
-    text-transform:uppercase;
-
-    white-space:nowrap;
-
-}
-
-.priority.high{background:#dc2626;color:white;}
-.priority.medium{background:#d97706;color:white;}
-.priority.low{background:#374151;color:#cbd5e1;}
-
-/* =====================================================
-   IMPACT / VALUE GRID
-===================================================== */
-
-.impact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-    gap:22px;
-
-    margin-top:10px;
-
-}
-
-.impact-col{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    border-radius:14px;
-
-    padding:22px;
-
-}
-
-.impact-col h3{
-
-    margin-top:0;
-
-    color:#d4a373;
-
-    font-size:1rem;
-
-    text-transform:uppercase;
-
-    letter-spacing:.03em;
-
-}
-
-.impact-col ul{
-
-    margin-top:12px;
-
-    padding-left:20px;
-
-}
-
-.impact-col li{
-
-    color:#cbd5e1;
-
-    font-size:.95rem;
-
-}
-
-/* =====================================================
-   PORTFOLIO DESCRIPTION BOX
-===================================================== */
-
-.portfolio-desc{
-
-    background:#111827;
-
-    border:1px solid #374151;
-
-    border-left:4px solid #d4a373;
-
-    border-radius:12px;
-
-    padding:24px;
-
-    color:#cbd5e1;
-
-}
-
-/* =====================================================
-   TECH / SKILL TAGS
-===================================================== */
-
-.tech-tags{
+.tags{
 
     display:flex;
 
@@ -921,170 +685,275 @@ max-height:none;
 
     gap:10px;
 
-    margin-top:14px;
-
 }
 
-.tech-tags span{
+.tags span{
 
-    background:#111827;
+    background:#2d2d2d;
 
-    border:1px solid #374151;
-
-    padding:8px 16px;
+    padding:7px 14px;
 
     border-radius:999px;
 
-    font-size:.85rem;
-
-    color:#cbd5e1;
+    font-size:.82rem;
 
 }
 
-/* =====================================================
-   SQL QUERY CARDS
-===================================================== */
+.project-body a{
 
-.query-card{
+    margin-top:auto;
 
-    background:#111827;
+    font-weight:700;
 
-    border:1px solid #374151;
+    color:#d4a373;
 
-    border-radius:14px;
+    text-decoration:none;
 
-    padding:24px;
-
-    margin-bottom:20px;
+    transition:.3s;
 
 }
 
-.query-card:last-child{
+.project-body a:hover{
 
-    margin-bottom:0;
+    transform:translateX(8px);
 
 }
 
-.query-head{
+/* Disabled link style for capstone projects not started yet */
+.project-body a.disabled{
+
+    color:#6b7280;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+.project-body a.disabled:hover{
+
+    transform:none;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .project-card{
+
+        flex:0 0 340px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .section-header{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+
+    }
+
+    .project-card{
+
+        flex:0 0 90%;
+
+    }
+
+}
+
+/* ==========================================
+SKILLS
+========================================== */
+
+#skills h2{
+
+    font-size:42px;
+
+    margin-bottom:45px;
+
+}
+
+.skills{
 
     display:flex;
 
     flex-wrap:wrap;
 
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:6px;
+    gap:18px;
 
 }
 
-.query-head h3{
+.skills span{
 
-    margin:0;
+    background:#1e293b;
 
-    color:#f8fafc;
+    padding:16px 28px;
 
-    font-size:1.05rem;
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.30s;
 
 }
 
-.query-file{
+.skills span:hover{
 
-    font-family:'Courier New',monospace;
+    background:#c08457;
 
-    font-size:.78rem;
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================
+CONTACT
+========================================== */
+
+#contact{
+
+    padding-bottom:120px;
+
+}
+
+#contact h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+#contact p{
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+}
+
+#contact a{
+
+    color:#c08457;
+
+    text-decoration:none;
+
+}
+
+#contact a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
 
     color:#94a3b8;
 
-    background:#1f2937;
-
-    border:1px solid #374151;
-
-    padding:4px 12px;
-
-    border-radius:999px;
-
-    white-space:nowrap;
+    border-top:1px solid rgba(255,255,255,.08);
 
 }
 
-.query-card p{
+/* ==========================================
+RESPONSIVE
+========================================== */
 
-    color:#94a3b8;
+@media(max-width:900px){
 
-    margin-bottom:14px;
+.sidebar{
 
-    font-size:.95rem;
+    position:relative;
 
-}
+    width:100%;
 
-.query-card pre{
-
-    background:#0b0f19;
-
-    border:1px solid #374151;
-
-    border-radius:10px;
-
-    padding:18px 20px;
-
-    overflow-x:auto;
-
-    margin-bottom:14px;
+    height:auto;
 
 }
 
-.query-card pre:last-child{
+main{
 
-    margin-bottom:0;
+    margin-left:0;
 
-}
-
-.query-card code{
-
-    font-family:'Fira Code','Courier New',monospace;
-
-    font-size:.85rem;
-
-    line-height:1.7;
-
-    color:#e2e8f0;
-
-    white-space:pre;
-}
-
-.sql-kw{color:#d4a373;font-weight:600;}
-.sql-fn{color:#7dd3fc;}
-.sql-com{color:#64748b;font-style:italic;}
-.sql-str{color:#86efac;}
-
-/* =====================================================
-   DATA QUALITY / NOTE CALLOUT
-===================================================== */
-
-.note-box{
-
-    background:#161b28;
-
-    border-left:4px solid #eab308;
-
-    padding:16px 20px;
-
-    border-radius:8px;
-
-    margin-top:16px;
-
-    color:#cbd5e1;
-
-    font-size:.95rem;
+    width:100%;
 
 }
 
-.note-box strong{
+.hero-text h1{
 
-    color:#eab308;
+    font-size:50px;
+
+}
+
+.hero-text h2{
+
+    font-size:30px;
+
+}
+
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.skills{
+
+    justify-content:center;
+
+}
+
+}
+
+/* ==========================================
+   ABOUT & CERTIFICATIONS RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .about-content{
+
+        width:100%;
+
+        padding:40px 35px 45px;
+
+    }
+
+    .about-content p{
+
+        width:100%;
+
+        max-width:none;
+
+        font-size:17px;
+
+        line-height:1.8;
+
+    }
+
+    .about-content .about-intro{
+
+        font-size:19px;
+
+    }
+
+    .certifications-grid{
+
+        grid-template-columns:1fr;
+
+    }
 
 }

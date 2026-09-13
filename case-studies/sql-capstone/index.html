@@ -5,9 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>SQL Capstone: Olist E-Commerce Analysis | Soms</title>
+<title>Soms | Data Analytics Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -21,696 +22,851 @@
 
 <body>
 
-<div class="container">
+<!-- SIDEBAR -->
 
-<a href="../../index.html#capstone" class="back-btn">
-← Back to Portfolio
-</a>
+<aside class="sidebar">
 
-<header class="page-header">
+<div class="logo">
 
-    <div class="badges-row">
-        <span class="industry">E-Commerce Analytics</span>
-        <span class="status completed">Completed</span>
-        <span class="tool-badge">MySQL</span>
-    </div>
+<h1>☕ Soms </h1>
 
-    <h1>
-        🛒 Olist E-Commerce — SQL Sales &amp; Customer Analysis
-    </h1>
+<p>Brewing Insights.<br>Delivering Impact.</p>
 
-    <p>
-        SQL Capstone Project — End-to-End Business Intelligence Case Study
-    </p>
+</div>
 
-</header>
+<nav>
 
-<div class="case-layout">
+<a href="#hero">Home</a>
 
-<aside class="case-sidebar">
+<a href="#about">About Me</a>
 
-    <h3>Contents</h3>
+<a href="#projects">Projects</a>
 
-    <a href="#summary">Executive Summary</a>
+<a href="#capstone">Capstone Projects</a>
 
-    <a href="#context">Business Context</a>
+<a href="#certifications">Certifications</a>
 
-    <a href="#objectives">Objectives</a>
+<a href="#skills">Skills</a>
 
-    <a href="#questions">Business Questions</a>
+<a href="#contact">Contact</a>
 
-    <a href="#dataset">Dataset &amp; Tools</a>
-
-    <a href="#queries">SQL Queries</a>
-
-    <a href="#insights">Key Findings</a>
-
-    <a href="#recommendations">Recommendations</a>
-
-    <a href="#impact">Business Impact</a>
-
-    <a href="#technical">Technical Highlights</a>
-
-    <a href="#skills">Skills Demonstrated</a>
-
-    <a href="#outcome">Outcome</a>
+</nav>
 
 </aside>
 
-<main class="case-content">
+<!-- MAIN -->
 
-<section id="summary">
+<main>
 
-<h2>Executive Summary</h2>
+<section id="hero">
 
-<p>
-    This project analyzes the Olist Brazilian E-Commerce dataset using MySQL.
-    The full schema contains 8 tables — customers, orders, order_items,
-    order_payments, order_reviews, products, sellers, and geolocation — of
-    which this project's 8 business questions draw on 5: customers, orders,
-    order_items, order_payments, and products. The goal was to turn raw
-    transactional order data into a set of answerable business questions
-    covering revenue trends, customer spend behavior, product category
-    performance, and retention.
-</p>
+<div class="hero-text">
 
-<div class="stat-grid">
+<h3>Hello, I'm</h3>
 
-    <div class="stat-card">
-        <div class="value">R$13.59M</div>
-        <div class="label">Total Revenue (Order-Item)</div>
-    </div>
+<h1>Somel Eraño Chan (Soms)</h1>
 
-    <div class="stat-card">
-        <div class="value">99,441</div>
-        <div class="label">Total Orders</div>
-    </div>
+<h2>
 
-    <div class="stat-card">
-        <div class="value">~90,005</div>
-        <div class="label">Unique Customers</div>
-    </div>
+Business Intelligence
 
-    <div class="stat-card">
-        <div class="value">74</div>
-        <div class="label">Product Categories</div>
-    </div>
+<br>
 
-</div>
+& Process Improvement Professional
 
-<h3>My Role</h3>
+</h2>
 
 <p>
-    Data Analyst — responsible for designing 8 business questions against the
-    Olist relational schema, writing MySQL queries using multi-table joins,
-    CTEs, and window functions, exporting results for analysis, and
-    translating query output into business findings and recommendations.
+
+I bridge the gap between data and business by combining analytical thinking, process improvement, 
+
+and practical data solutions to solve problems, uncover insights, and help teams make better decisions.
+
 </p>
 
-</section>
+<a href="#projects" class="btn">
 
-<section id="context">
+Explore My Portfolio →
 
-<h2>Business Context</h2>
-
-<p>
-    Order-level, payment-level, and product-level data existed across
-    separate relational tables, but no single view connected customer
-    spend behavior, revenue trends, and product category performance. The
-    goal of this project was to write a focused set of SQL queries that
-    surface who the highest-value customers are, how revenue is trending
-    month to month, which categories and products actually drive revenue,
-    and how much of the customer base returns for a second purchase.
-</p>
-
-</section>
-
-<section id="objectives">
-
-<h2>Project Objectives</h2>
-
-<p>
-    Write a set of MySQL queries that answer key commercial questions and
-    support data-driven decisions around:
-</p>
-
-<ul>
-    <li>Top customers by lifetime spend</li>
-    <li>Monthly revenue trend and month-over-month change</li>
-    <li>Product category and product-level revenue performance</li>
-    <li>Customer spend tier segmentation</li>
-    <li>Repeat vs. one-time buyer behavior</li>
-    <li>Revenue concentration across categories</li>
-</ul>
-
-</section>
-
-<section id="questions">
-
-<h2>Business Questions</h2>
-
-<p>
-    Each query was written to answer a specific, practical question a
-    commercial or retention-focused analyst would typically ask.
-</p>
-
-<div class="question-card">
-    <h3>1. Who are the top 10 customers by total amount spent?</h3>
-    <p>Customers, orders, and payments were joined and aggregated to rank customers by lifetime spend.</p>
-</div>
-
-<div class="question-card">
-    <h3>2. What is the monthly revenue trend across the dataset?</h3>
-    <p>Orders were grouped by purchase month to build a full monthly revenue series from the payments table.</p>
-</div>
-
-<div class="question-card">
-    <h3>3. What is the month-over-month change in revenue?</h3>
-    <p>A window function (LAG) was used over the monthly revenue series to calculate the change from the previous month.</p>
-</div>
-
-<div class="question-card">
-    <h3>4. Which product categories generate the most revenue?</h3>
-    <p>Products were joined to order items and grouped by category to rank all 74 categories by total revenue.</p>
-</div>
-
-<div class="question-card">
-    <h3>5. What are the top 3 products by revenue within each category?</h3>
-    <p>A ranked CTE using ROW_NUMBER() PARTITION BY category surfaces the top 3 revenue-generating products inside every category.</p>
-</div>
-
-<div class="question-card">
-    <h3>6. How do customers segment into Low / Medium / High spend tiers?</h3>
-    <p>Total spend per customer was calculated and bucketed into tiers using CASE WHEN logic.</p>
-</div>
-
-<div class="question-card">
-    <h3>7. How many customers are repeat buyers vs. one-time buyers?</h3>
-    <p>ROW_NUMBER() partitioned by customer_unique_id was used to count each customer's total orders and classify them as repeat or one-time.</p>
-</div>
-
-<div class="question-card">
-    <h3>8. What percent of total revenue comes from the top category?</h3>
-    <p>A SUM() OVER () window function was used to calculate each category's revenue as a percentage of total revenue.</p>
-</div>
-
-</section>
-
-<section id="dataset">
-
-<h2>Dataset &amp; Tools Overview</h2>
-
-<table>
-
-<tr>
-    <th>Category</th>
-    <th>Details</th>
-</tr>
-
-<tr>
-    <td>Industry</td>
-    <td>E-Commerce / Retail</td>
-</tr>
-
-<tr>
-    <td>Primary Tool</td>
-    <td>MySQL</td>
-</tr>
-
-<tr>
-    <td>Dataset</td>
-    <td>Olist Brazilian E-Commerce (public dataset)</td>
-</tr>
-
-<tr>
-    <td>Tables Used</td>
-    <td>customers, orders, order_items, order_payments, products (of 8 total tables)</td>
-</tr>
-
-<tr>
-    <td>Scope</td>
-    <td>99,441 orders, ~90,005 unique customers, 74 product categories</td>
-</tr>
-
-<tr>
-    <td>Time Span</td>
-    <td>September 2016 – October 2018 (reliable trend window: Jan 2017 – Aug 2018)</td>
-</tr>
-
-</table>
-
-<div class="note-box">
-    <strong>Data quality note:</strong> November 2016 has zero recorded
-    orders, and September–October 2018 show a &gt;99% month-over-month
-    revenue drop (R$4,439.54 and R$589.67), far more consistent with an
-    incomplete data extract than a real demand collapse. Both periods are
-    excluded from trend conclusions.
-</div>
-
-</section>
-
-<section id="queries">
-
-<h2>SQL Queries</h2>
-
-<p>
-    All 8 queries below run against the <code>olist</code> schema and use a
-    combination of multi-table joins, CTEs, and window functions.
-</p>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q1. Top 10 Customers by Total Spend</h3>
-        <span class="query-file">Q1_Top_Customers.sql</span>
-    </div>
-    <p>Joins customers → orders → payments and ranks customers by lifetime spend.</p>
-    <pre><code>select
-    c.customer_id,
-    round(sum(o2.payment_value), 2) as total_spent,
-    count(distinct o1.order_id) as num_orders
-from customers c
-inner join orders o1
-    on c.customer_id = o1.customer_id
-inner join order_payments o2
-    on o1.order_id = o2.order_id
-group by c.customer_id
-order by total_spent desc
-limit 10;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q2. Monthly Revenue Trend</h3>
-        <span class="query-file">Q2_Monthly_Revenue.sql</span>
-    </div>
-    <p>Groups payments by purchase month to build the full monthly revenue series.</p>
-    <pre><code>select
-    date_format(o1.order_purchase_timestamp, '%Y-%m') as month,
-    format(sum(o2.payment_value), 0) as revenue
-from orders o1
-inner join order_payments o2
-    on o1.order_id = o2.order_id
-group by month
-order by month;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q3. Month-over-Month Revenue Change</h3>
-        <span class="query-file">Q3_MoM_Change.sql</span>
-    </div>
-    <p>Uses a CTE plus the LAG() window function to compare each month's revenue against the prior month.</p>
-    <pre><code>with monthly_revenue as (
-    select
-        date_format(order_purchase_timestamp, '%Y-%m') as month,
-        sum(op.payment_value) as revenue
-    from orders o
-    inner join order_payments op
-        on o.order_id = op.order_id
-    group by date_format(order_purchase_timestamp, '%Y-%m')
-)
-select
-    month,
-    revenue,
-    lag(revenue) over (order by month) as previous_month_revenue,
-    revenue - lag(revenue) over (order by month) as mom_change
-from monthly_revenue
-order by month;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q4. Categories by Revenue</h3>
-        <span class="query-file">Q4_Categories_Highest_Revenue.sql</span>
-    </div>
-    <p>Joins products to order items and aggregates revenue across all 74 categories.</p>
-    <pre><code>select
-    p.product_category_name as product_category,
-    sum(o.price) as revenue
-from products p
-inner join order_items o
-    on p.product_id = o.product_id
-group by product_category
-order by revenue desc;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q5. Top 3 Products per Category</h3>
-        <span class="query-file">Q5_Top3_Products_per_Categories.sql</span>
-    </div>
-    <p>A ranked CTE using ROW_NUMBER() partitioned by category surfaces each category's top 3 revenue-generating products.</p>
-    <pre><code>with product_revenue as (
-    select
-        p.product_category_name as category,
-        oi.product_id,
-        sum(oi.price) as revenue
-    from products p
-    inner join order_items oi
-        on p.product_id = oi.product_id
-    group by p.product_category_name, oi.product_id
-),
-ranked_products as (
-    select
-        category,
-        product_id,
-        revenue,
-        row_number() over (
-            partition by category
-            order by revenue desc
-        ) as product_rank
-    from product_revenue
-)
-select category, product_id, revenue, product_rank
-from ranked_products
-where product_rank <= 3
-order by category, product_rank;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q6. Customer Spend Tiers</h3>
-        <span class="query-file">Q6_Customer_Segment_Spend_Tiers.sql</span>
-    </div>
-    <p>Segments every customer into Low / Medium / High spend tiers using CASE WHEN logic.</p>
-    <pre><code>with customer_spending as (
-    select
-        o.customer_id,
-        sum(op.payment_value) as total_spend
-    from orders o
-    inner join order_payments op
-        on o.order_id = op.order_id
-    group by o.customer_id
-)
-select
-    customer_id,
-    total_spend,
-    case
-        when total_spend < 100 then 'low'
-        when total_spend < 500 then 'medium'
-        else 'high'
-    end as spend_tier
-from customer_spending
-order by total_spend desc;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q7. Repeat Buyer vs. One-Time Buyer</h3>
-        <span class="query-file">Q7_RepeatBuyer_vs_OneTimeBuyer.sql</span>
-    </div>
-    <p>Counts each customer's total orders via ROW_NUMBER() to classify them as repeat or one-time buyers.</p>
-    <pre><code>with customer_orders as (
-    select
-        o.order_id,
-        c.customer_unique_id,
-        row_number() over (
-            partition by c.customer_unique_id
-            order by o.order_id
-        ) as purchase_number
-    from orders o
-    inner join customers c
-        on o.customer_id = c.customer_id
-),
-customer_purchase_counts as (
-    select
-        customer_unique_id,
-        max(purchase_number) as total_purchase
-    from customer_orders
-    group by customer_unique_id
-)
-select
-    case
-        when total_purchase = 1 then 'one_time_buyer'
-        else 'repeat_buyer'
-    end as customer_type,
-    count(*) as customer_count
-from customer_purchase_counts
-group by customer_type;</code></pre>
-</div>
-
-<div class="query-card">
-    <div class="query-head">
-        <h3>Q8. Top Category's % of Total Revenue</h3>
-        <span class="query-file">Q8_Percent_Total_Revenue_Top_Category.sql</span>
-    </div>
-    <p>Uses SUM() OVER () to calculate each category's revenue as a percentage of total order-item revenue.</p>
-    <pre><code>with category_revenue as (
-    select
-        p.product_category_name as category,
-        sum(oi.price) as revenue
-    from products p
-    inner join order_items oi
-        on p.product_id = oi.product_id
-    group by p.product_category_name
-)
-select
-    category,
-    revenue,
-    sum(revenue) over () as total_revenue,
-    round(revenue / sum(revenue) over () * 100, 2) as percent_of_total
-from category_revenue
-order by revenue desc;</code></pre>
-</div>
-
-</section>
-
-<section id="insights">
-
-<h2>Key Findings</h2>
-
-<div class="insight-card">
-    <h3>1. Revenue is concentrated in a handful of categories, led by health &amp; beauty</h3>
-    <p>
-        beleza_saude (health &amp; beauty) is the single largest category,
-        generating R$1,258,681.34 — 9.26% of total order-item revenue (Q8).
-        It isn't an outlier in isolation: the top 5 categories —
-        beleza_saude, relogios_presentes, cama_mesa_banho, esporte_lazer, and
-        informatica_acessorios — together bring in R$5.40M, roughly 40% of
-        all revenue (Q4), out of 74 categories total.
-    </p>
-    <div class="takeaway">
-        <strong>Business takeaway:</strong> Inventory, supplier relationships,
-        and marketing spend deliver disproportionate returns when focused on
-        a short list of categories rather than spread evenly.
-    </div>
-</div>
-
-<div class="insight-card">
-    <h3>2. The biggest spenders are one-time buyers, not loyal customers — a retention gap</h3>
-    <p>
-        Q1 shows that all 10 of the highest lifetime-spend customers made
-        exactly one order each (the top spender, R$13,664.08, came from a
-        single transaction). That isn't a fluke: Q7 shows 87,347 of 90,005
-        customers (97.05%) are one-time buyers, versus only 2,658 (2.95%) who
-        are repeat buyers.
-    </p>
-    <div class="takeaway">
-        <strong>Business takeaway:</strong> Olist's biggest revenue moments —
-        and its customer base as a whole — are driven almost entirely by
-        first-time, high-ticket purchases rather than a returning customer
-        base. There is essentially no retention flywheel currently converting
-        big spenders into repeat relationships.
-    </div>
-</div>
-
-<div class="insight-card">
-    <h3>3. Revenue growth plateaued through 2018, and the reliable trend line ends in August</h3>
-    <p>
-        Q3's month-over-month view shows revenue climbing from R$138K
-        (Jan 2017) to a peak of R$1.19M in Nov 2017 (a clear holiday/Black
-        Friday spike), before settling into a plateau of roughly
-        R$1.0M–R$1.16M/month from Dec 2017 through Aug 2018 — flat, not
-        growing.
-    </p>
-    <div class="takeaway">
-        <strong>Business takeaway:</strong> This plateau, on its own, is a
-        signal that the business had stopped scaling before the dataset's
-        apparent "collapse" in Sep–Oct 2018, which is almost certainly a
-        truncated extract rather than a real demand crash.
-    </div>
-</div>
-
-</section>
-
-<section id="recommendations">
-
-<h2>Business Recommendations</h2>
-
-<div class="recommendation-card">
-    <div class="recommendation-head">
-        <h3>1. Launch a Targeted Retention Program for High- and Medium-Tier One-Time Spenders</h3>
-        <span class="priority high">High Priority</span>
-    </div>
-    <p>
-        With 97% of customers never returning (Q7) and the very highest
-        spenders being single-order customers (Q1), a post-purchase win-back
-        campaign — loyalty discount, restock reminder, or bundled offer —
-        aimed at customers in the "high" and "medium" spend tiers from Q6
-        could convert a meaningful slice of that customer base into repeat
-        buyers, directly reducing dependence on constantly acquiring new
-        customers.
-    </p>
-</div>
-
-<div class="recommendation-card">
-    <div class="recommendation-head">
-        <h3>2. Concentrate Category Investment on the Top 5 Revenue Drivers</h3>
-        <span class="priority high">High Priority</span>
-    </div>
-    <p>
-        Since beleza_saude, relogios_presentes, cama_mesa_banho,
-        esporte_lazer, and informatica_acessorios already generate ~40% of
-        revenue from just 5 of 74 categories (Q4/Q8), prioritizing ad spend,
-        supplier negotiation, and stock depth for these categories — anchored
-        on the top 3 products per category identified in Q5 — should produce
-        a higher return than distributing budget evenly across the long
-        tail.
-    </p>
-</div>
-
-</section>
-
-<section id="impact">
-
-<h2>Impact / Value</h2>
-
-<p>
-    This set of queries transforms raw relational order data into a
-    management-ready view of revenue concentration, trend health, and
-    customer retention risk.
-</p>
-
-<div class="impact-grid">
-
-    <div class="impact-col">
-        <h3>What is happening</h3>
-        <ul>
-            <li>R$13.59M in order-item revenue (R$16.0M on a payments basis) across 99,441 orders</li>
-            <li>Top 5 of 74 categories drive ~40% of all revenue</li>
-            <li>97.05% of customers are one-time buyers</li>
-            <li>Revenue plateaued at R$1.0M–R$1.16M/month from Dec 2017–Aug 2018</li>
-            <li>The final two months of data are almost certainly a truncated extract</li>
-        </ul>
-    </div>
-
-    <div class="impact-col">
-        <h3>Why it matters</h3>
-        <ul>
-            <li>Revenue depends heavily on constant new-customer acquisition, not retention</li>
-            <li>A small set of categories carries outsized commercial weight</li>
-            <li>Growth had already stalled before the apparent data cutoff</li>
-            <li>Trend conclusions must exclude the incomplete Sep–Oct 2018 window</li>
-        </ul>
-    </div>
-
-    <div class="impact-col">
-        <h3>What to do next</h3>
-        <ul>
-            <li>Launch a win-back program for high/medium one-time spenders</li>
-            <li>Concentrate category investment on the top 5 revenue drivers</li>
-            <li>Use Q5's top-products ranking to select hero SKUs per category</li>
-            <li>Re-verify the Sep–Oct 2018 data extract before trusting it</li>
-        </ul>
-    </div>
-
-</div>
-
-<h3>Portfolio Impact Statement</h3>
-
-<div class="portfolio-desc">
-    This project demonstrates how SQL can be used to convert raw,
-    multi-table transactional data into actionable commercial strategy —
-    surfacing a R$13.59M revenue base's category concentration, a 97%
-    one-time-buyer retention gap, and a stalled growth trend, all directly
-    from the relational schema without any external BI tool.
-</div>
-
-</section>
-
-<section id="technical">
-
-<h2>Technical Highlights</h2>
-
-<p>SQL techniques used throughout this capstone:</p>
-
-<div class="tech-tags">
-    <span>Multi-Table JOINs</span>
-    <span>GROUP BY / HAVING</span>
-    <span>CTEs (WITH clauses)</span>
-    <span>ROW_NUMBER() / PARTITION BY</span>
-    <span>LAG() Window Function</span>
-    <span>SUM() OVER ()</span>
-    <span>CASE WHEN Tiering</span>
-    <span>Percent-of-Total Calculations</span>
-    <span>Date Formatting &amp; Grouping</span>
-    <span>Top-N / Ranking Queries</span>
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills Demonstrated</h2>
-
-<p>
-    This project demonstrates the ability to move from
-    <strong>Raw Relational Data → SQL Query → Insight → Recommendation →
-    Business Decision</strong>.
-</p>
-
-<div class="tech-tags">
-    <span>MySQL</span>
-    <span>SQL Joins</span>
-    <span>Window Functions</span>
-    <span>CTEs</span>
-    <span>Data Aggregation</span>
-    <span>Customer Segmentation</span>
-    <span>Cohort / Retention Analysis</span>
-    <span>Revenue Analysis</span>
-    <span>Business Intelligence</span>
-    <span>Data Quality Assessment</span>
-    <span>Business Insights</span>
-    <span>Data Storytelling</span>
-</div>
-
-</section>
-
-<section id="outcome">
-
-<h2>Project Outcome</h2>
-
-<p>
-    This project demonstrates an end-to-end SQL analysis workflow — from
-    writing 8 targeted MySQL queries against a 5-table relational schema, to
-    surfacing revenue concentration, a 97% one-time-buyer retention gap, and
-    a stalled 2018 growth trend, resulting in two concrete, priority-ranked
-    business recommendations.
-</p>
-
-</section>
-
-</main>
-
-</div>
-
-<footer>
-
-<div class="project-navigation">
-
-<a href="../../index.html#capstone">
-    ← Back to Capstone Projects
 </a>
 
 </div>
 
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about-box">
+
+        <!-- PROFESSIONAL HEADER -->
+        <div class="about-header">
+            <img 
+                src="assets/Soms_Header.png" 
+                alt="Somel Chan - Business Intelligence & Process Improvement Analyst"
+            >
+        </div>
+
+        <!-- ABOUT CONTENT -->
+        <div class="about-content">
+
+            <p class="about-intro">
+                I’m a Business Intelligence & Process Improvement Analyst specializing
+                in data analytics, Power BI, Excel, SQL, KPI development, and process improvement.
+            </p>
+
+            <p>
+                I turn business data into clear insights that help organizations
+                understand performance, identify opportunities, improve processes,
+                and make better decisions. My experience includes developing
+                dashboards and reports, analyzing operational and financial data,
+                designing performance metrics, and delivering data-driven solutions
+                for business needs.
+            </p>
+
+            <p>
+                I take an end-to-end approach to analytics—from understanding the
+                business problem and preparing the data to analysis, visualization,
+                insights, and recommendations.
+            </p>
+
+            <p>
+                I’m open to part-time, project-based, freelance, consulting, and
+                full-time opportunities in Business Intelligence, Data Analytics,
+                Reporting, and Process Improvement.
+            </p>
+
+            <p>
+                Every project in this portfolio follows a structured analytics
+                workflow—from understanding the business problem to delivering
+                actionable recommendations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="projects" class="projects-section">
+
+    <div class="section-header">
+
+        <div>
+            <h2>Featured Analytics Projects</h2>
+            <p>
+                Browse through my end-to-end analytics case studies.
+            </p>
+        </div>
+
+        <div class="slider-controls">
+
+            <button id="prevBtn" class="slider-btn">
+                &#10094;
+            </button>
+
+            <button id="nextBtn" class="slider-btn">
+                &#10095;
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="projectSlider" class="project-slider">
+
+        <!-- Airbnb -->
+
+        <article class="project-card">
+
+            <img src="case-studies/airbnb-executive-dashboard/dashboard.png" alt="Airbnb Dashboard">
+
+            <div class="project-body">
+
+                <span class="industry hospitality">
+                    Hospitality
+                </span>
+
+                <h3>Airbnb Executive Dashboard</h3>
+
+                <p>
+                    Executive dashboard analyzing pricing,
+                    occupancy trends,
+                    neighborhood performance,
+                    and revenue opportunities.
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+<a href="case-studies/airbnb-executive-dashboard/">
+    Explore Case Study →
+</a>
+
+            </div>
+
+        </article>
+
+        <!-- Bank -->
+
+        <article class="project-card">
+
+            <img src="case-studies/bank-churn-analysis/dashboard.png" alt="Bank Churn">
+
+            <div class="project-body">
+
+                <span class="industry banking">
+                    Banking
+                </span>
+
+                <h3>Bank Churn Analysis</h3>
+
+                <p>
+                    Customer retention dashboard identifying
+                    churn drivers,
+                    high-risk customers,
+                    and business opportunities.
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/bank-churn-analysis/index.html">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Hospital -->
+
+        <article class="project-card">
+
+            <img src="case-studies/hospital-er-analysis/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry healthcare">
+                    Healthcare
+                </span>
+
+                <h3>Hospital ER Analysis</h3>
+
+                <p>
+
+                    Analyze patient waiting times,
+                    referrals,
+                    emergency room utilization,
+                    and operational efficiency.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/hospital-er-analysis/index.html">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- HR -->
+
+        <article class="project-card">
+
+            <img src="case-studies/hr-data-analytics/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry hr">
+
+                    HR
+
+                </span>
+
+                <h3>HR Data Analytics</h3>
+
+                <p>
+
+                    Workforce insights including
+                    employee demographics,
+                    attrition,
+                    diversity,
+                    and HR KPIs.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/hr-data-analytics/index.html">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Complaints -->
+
+        <article class="project-card">
+
+            <img src="case-studies/financial-consumer-complaints-analysis-bank-of-america/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry banking">
+
+                    Banking
+
+                </span>
+
+                <h3>Financial Consumer Complaints</h3>
+
+                <p>
+
+                    Customer complaint analytics
+                    highlighting issue trends,
+                    service quality,
+                    and resolution insights.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/financial-consumer-complaints-analysis-bank-of-america/index.html">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Manufacturing -->
+
+        <article class="project-card">
+
+            <img src="case-studies/manufacturing-downtime-analysis/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry manufacturing">
+
+                    Manufacturing
+
+                </span>
+
+                <h3>Manufacturing Downtime</h3>
+
+                <p>
+
+                    Discover production losses,
+                    downtime reasons,
+                    and operational improvements.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/manufacturing-downtime-analysis/index.html">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Food -->
+
+        <article class="project-card">
+
+            <img src="case-studies/food-and-beverage-sales-dashboard/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry food">
+
+                    Retail
+
+                </span>
+
+                <h3>Food & Beverage Sales</h3>
+
+                <p>
+
+                    Sales dashboard for revenue,
+                    product performance,
+                    profitability,
+                    and customer purchasing behavior.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/food-and-beverage-sales-dashboard/README.md">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- Financial -->
+
+        <article class="project-card">
+
+            <img src="case-studies/financial-report/dashboard.png">
+
+            <div class="project-body">
+
+                <span class="industry finance">
+
+                    Finance
+
+                </span>
+
+                <h3>Financial Report Dashboard</h3>
+
+                <p>
+
+                    Executive financial reporting
+                    using KPI monitoring,
+                    profitability,
+                    and performance tracking.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+
+                </div>
+
+                <a href="case-studies/financial-report/README.md">
+
+                    Explore Case Study →
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     CAPSTONE PROJECTS
+=========================== -->
+
+<section id="capstone" class="projects-section">
+
+    <div class="section-header">
+
+        <div>
+            <h2>Capstone Projects</h2>
+            <p>
+                Larger, end-to-end capstone builds across different analytics tools.
+            </p>
+        </div>
+
+        <div class="slider-controls">
+
+            <button id="prevBtnCapstone" class="slider-btn">
+                &#10094;
+            </button>
+
+            <button id="nextBtnCapstone" class="slider-btn">
+                &#10095;
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="capstoneSlider" class="project-slider">
+
+        <!-- Excel Capstone: Restaurant Orders -->
+
+        <article class="project-card">
+
+            <video
+                src="case-studies/capstone-excel-restaurant-orders/preview.mp4"
+                poster="case-studies/capstone-excel-restaurant-orders/dashboard-overview.png"
+                controls
+                muted
+                playsinline
+            ></video>
+
+            <div class="project-body">
+
+                <div class="badges">
+                    <span class="industry food">Food &amp; Beverage</span>
+                    <span class="status completed">Completed</span>
+                </div>
+
+                <h3>Excel Capstone: Restaurant Orders</h3>
+
+                <p>
+                    Three-tab Excel dashboard built on a Power Pivot star-schema
+                    model, analyzing $159.2K in sales across menu items,
+                    cuisine types, meal periods, and daily/weekly trends.
+                </p>
+
+                <div class="tags">
+
+                    <span>Excel</span>
+                    <span>Power Query</span>
+                    <span>Power Pivot</span>
+                    <span>DAX</span>
+
+                </div>
+
+                <a href="case-studies/capstone-excel-restaurant-orders/">
+                    Explore Capstone Project →
+                </a>
+
+            </div>
+
+        </article>
+
+<!-- SQL Capstone -->
+
+<article class="project-card">
+
+    <video
+        src="case-studies/sql-capstone/preview.mp4"
+        poster="case-studies/sql-capstone/dashboard-overview.png"
+        controls
+        muted
+        playsinline
+    ></video>
+
+    <div class="project-body">
+
+        <div class="badges">
+            <span class="industry ecommerce">E-Commerce</span>
+            <span class="status completed">Completed</span>
+        </div>
+
+        <h3>SQL Capstone Project</h3>
+
+        <p>
+            An end-to-end MySQL analysis of the Olist Brazilian E-Commerce
+            dataset — customer spend, revenue trends, category performance,
+            and retention, built with joins, CTEs, and window functions.
+        </p>
+
+        <div class="tags">
+
+            <span>SQL</span>
+            <span>MySQL</span>
+
+        </div>
+
+        <a href="case-studies/sql-capstone/">Explore Capstone Project →</a>
+
+    </div>
+
+</article>
+
+        <!-- Power BI Capstone -->
+
+        <article class="project-card">
+
+            <div class="project-placeholder">📊</div>
+
+            <div class="project-body">
+
+                <div class="badges">
+                    <span class="status not-started">Not Yet Started</span>
+                </div>
+
+                <h3>Power BI Capstone Project</h3>
+
+                <p>
+                    A Power BI capstone project planned for an upcoming
+                    portfolio update.
+                </p>
+
+                <div class="tags">
+
+                    <span>Power BI</span>
+
+                </div>
+
+                <a class="disabled">Coming Soon</a>
+
+            </div>
+
+        </article>
+
+        <!-- Python Capstone -->
+
+        <article class="project-card">
+
+            <div class="project-placeholder">🐍</div>
+
+            <div class="project-body">
+
+                <div class="badges">
+                    <span class="status not-started">Not Yet Started</span>
+                </div>
+
+                <h3>Python Capstone Project</h3>
+
+                <p>
+                    A Python-based analytics capstone project planned for
+                    an upcoming portfolio update.
+                </p>
+
+                <div class="tags">
+
+                    <span>Python</span>
+
+                </div>
+
+                <a class="disabled">Coming Soon</a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="certifications-grid">
+
+    <div class="certificate-card">
+
+        <img
+            src="certifications/Data Analytics Fundamentals.png"
+            alt="Data Analytics Fundamentals Certificate"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Data Analytics Fundamentals</h3>
+
+            <p>
+                DataSense Analytics
+            </p>
+
+            <span>
+                May 2026
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="certificate-card">
+
+        <img
+            src="certifications/Advanced Excel Formula.png"
+            alt="Advanced Excel Formula Certificate"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Advanced Excel Formula</h3>
+
+            <p>
+                DataSense Analytics
+            </p>
+
+            <span>
+                June 2026
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="certificate-card">
+
+        <img
+            src="certifications/Power BI Guided Projects.png"
+            alt="Power BI Guided Projects Certificate"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Power BI Guided Projects</h3>
+
+            <p>
+                DataSense Analytics
+            </p>
+
+            <span>
+                July 2026
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+    
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<span>Power BI</span>
+
+<span>DAX</span>
+
+<span>Power Query</span>
+
+<span>SQL</span>
+
+<span>Excel</span>
+
+<span>Python(Ongoing)</span>
+
+<span>Data Modeling</span>
+
+<span>Dashboard Design</span>
+
+<span>Business Analysis</span>
+
+<span>Data Storytelling</span>
+
+<span>Lean Six Sigma</span>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Let's Connect</h2>
+
 <p>
-    © 2026 Somel Chan • Brewing Insights. Delivering Impact.
+
+📧
+
+<a href="mailto:somelerano.chan@gmail.com">
+
+somelerano.chan@gmail.com
+
+</a>
+
 </p>
+
+<p>
+
+💼
+
+<a href="https://linkedin.com/in/somschan"
+
+target="_blank">
+
+linkedin.com/in/somschan
+
+</a>
+
+</p>
+
+<p>
+
+👍
+
+<a href="https://web.facebook.com/SomsDataAnalytics"
+    target="_blank">
+
+https://web.facebook.com/SomsDataAnalytics
+
+</a>
+
+</p>
+    
+</section>
+
+<footer>
+
+© 2026 Somel Chan • Brewing Insights. Delivering Impact.
 
 </footer>
 
-</div>
+</main>
+
+<script src="script.js"></script>
 
 </body>
 
