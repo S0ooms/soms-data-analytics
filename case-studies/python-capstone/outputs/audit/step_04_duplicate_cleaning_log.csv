@@ -1,0 +1,8 @@
+Table,Rows before,Rows removed,Rows after,Action
+customers,5050,50,5000,Removed exact duplicates across all original columns; kept the first occurrence.
+products,800,0,800,Removed exact duplicates across all original columns; kept the first occurrence.
+orders,15075,75,15000,Removed exact duplicates across all original columns; kept the first occurrence.
+order_items,37763,262,37501,Removed exact duplicates across all original columns; kept the first occurrence.
+payments,15000,0,15000,Removed exact duplicates across all original columns; kept the first occurrence.
+shipments,15000,0,15000,Removed exact duplicates across all original columns; kept the first occurrence.
+returns,1200,0,1200,Removed exact duplicates across all original columns; kept the first occurrence.

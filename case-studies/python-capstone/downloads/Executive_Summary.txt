@@ -1,0 +1,14 @@
+EXECUTIVE SUMMARY — OPTION A: SALES PERFORMANCE & CUSTOMER INSIGHTS
+
+- The project analyzed seven synthetic retail/e-commerce CSV datasets with intentional quality issues.
+- Cleaning removed 387 exact duplicate rows and consolidated 18 product labels into eight categories.
+- A validated fact table retained 37,501 order-item records after joins to orders, products and customers.
+- Completed-order quality checks produced 9,612 eligible orders, covering 23,876 sales items.
+- Eligible merchandise revenue totaled PHP 4,383,742.63, with average order value of PHP 456.07.
+- July 2024 led the 25-month revenue series at PHP 200,411.55.
+- Toys generated PHP 598,902.86 in category revenue, followed by Electronics at PHP 591,474.85.
+- Central Luzon generated the highest regional revenue at PHP 763,542.48.
+- Of 4,276 matched customers, 2,873 had two or more eligible orders, and 1,403 had one.
+- Of 15,000 cleaned orders, 1,235 were cancelled (8.23%); cancellation count peaked jointly in October 2024 and January 2025.
+
+METHOD NOTE: Merchandise revenue excludes shipping and is before refunds. The cancellation trend is grouped by order-placement month because cancellation-event dates were not supplied.

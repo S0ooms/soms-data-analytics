@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Python capstone case study by Soms: an end-to-end retail sales analysis covering data cleaning, order-item modeling, revenue, customer segments, and cancellation trends.">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Python Capstone: Sales Performance &amp; Customer Insights | Soms">
+  <meta property="og:description" content="From seven messy retail CSVs to validated KPIs, six Python charts, and a 1920 x 1080 sales dashboard.">
+  <meta property="og:image" content="assets/dashboard.png">
+  <title>Python Capstone | Sales Performance &amp; Customer Insights | Soms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <a class="back-btn" href="../../index.html#capstone" aria-label="Return to capstone projects on the main portfolio">
+      <span aria-hidden="true">&#8592;</span> Back to Portfolio
+    </a>
+
+    <header class="page-header">
+      <div class="header-tags">
+        <span class="industry">Retail / E-Commerce Analytics</span>
+        <span class="status-tag">Completed Capstone</span>
+      </div>
+      <p class="eyebrow">S.O.M.S. &nbsp;/&nbsp; PYTHON CAPSTONE CASE STUDY</p>
+      <h1>Sales Performance <span class="title-accent">&amp; Customer Insights</span></h1>
+      <p class="header-description">An end-to-end Python and Jupyter analysis of synthetic retail transaction data, from cleaning seven source files to a validated sales fact table, customer segmentation, and executive-ready visuals.</p>
+      <div class="tech-tags" aria-label="Tools used">
+        <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Jupyter Notebook</span>
+      </div>
+      <div class="hero-actions">
+        <a class="button-primary" href="#dashboard">Explore Dashboard <span aria-hidden="true">&#8594;</span></a>
+        <a class="button-outline" href="downloads/Option_A_Sales_Analysis.ipynb" download>Download Notebook <span aria-hidden="true">&#8595;</span></a>
+      </div>
+    </header>
+
+    <div class="case-layout">
+      <aside class="case-sidebar" aria-label="Case study contents">
+        <h2 class="sidebar-title">Contents</h2>
+        <nav class="toc-nav" aria-label="On this page">
+          <a href="#summary">Executive Summary</a>
+          <a href="#dashboard">Dashboard Preview</a>
+          <a href="#context">Context &amp; Objectives</a>
+          <a href="#dataset">Dataset Overview</a>
+          <a href="#cleaning">Data Preparation</a>
+          <a href="#model">Fact Table &amp; Methods</a>
+          <a href="#kpis">Performance KPIs</a>
+          <a href="#visualizations">Visual Analysis</a>
+          <a href="#takeaways">Key Takeaways</a>
+          <a href="#insights">Eight Insights</a>
+          <a href="#summary-conclusions">Summary &amp; Conclusions</a>
+          <a href="#recommendations">Two Recommendations</a>
+          <a href="#deliverables">Project Deliverables</a>
+        </nav>
+        <div class="sidebar-note">
+          <span class="sidebar-note-label">OBSERVATION PERIOD</span>
+          <strong>Jan 2024 – Jan 2026</strong>
+          <span>25 months of order placements</span>
+        </div>
+      </aside>
+
+      <main id="main-content" class="case-content">
+        <section id="summary" class="case-section">
+          <div class="section-kicker">01 / OVERVIEW</div>
+          <h2>Executive Summary</h2>
+          <p class="lead">How is the store performing, and what drives revenue? I used Python to turn a seven-file training dataset into a consistent view of sales, product contribution, geography, customer purchasing patterns, and cancellations.</p>
+          <ul class="summary-points">
+            <li>Loaded and assessed seven retail/e-commerce CSV files.</li>
+            <li>Removed <strong>387</strong> exact duplicate records across the source tables.</li>
+            <li>Standardized product labels from <strong>18</strong> variations to <strong>8</strong> categories.</li>
+            <li>Created a <strong>37,501-row</strong> order-item-level fact table without multiplying rows during joins.</li>
+            <li>Applied a documented quality filter to identify <strong>9,612 eligible Completed orders</strong>.</li>
+            <li>Calculated <strong>PHP 4,383,742.63</strong> in merchandise revenue and a <strong>PHP 456.07</strong> AOV.</li>
+            <li>Compared monthly trends, products, categories, and customer regions.</li>
+            <li>Separated <strong>2,873 repeat</strong> and <strong>1,403 one-order</strong> matched customers.</li>
+            <li>Measured <strong>1,235 cancelled orders</strong> among all <strong>15,000</strong> cleaned orders.</li>
+            <li>Delivered six standalone charts and a verified <strong>1920 &times; 1080</strong> dashboard.</li>
+          </ul>
+        </section>
+
+        <section id="dashboard" class="case-section case-section-wide">
+          <div class="section-kicker">02 / REPORT VIEW</div>
+          <div class="section-heading-row">
+            <div>
+              <h2>Dashboard Preview</h2>
+              <p>Final Python dashboard built from the validated sales and cancellation analysis.</p>
+            </div>
+            <a class="subtle-link" href="assets/dashboard.png" target="_blank" rel="noopener">Full-size PNG <span aria-hidden="true">&#8599;</span></a>
+          </div>
+          <a href="assets/dashboard.png" class="dashboard-preview" data-lightbox data-caption="Sales Performance &amp; Customer Insights — 1920 × 1080 dashboard" aria-label="Open dashboard in enlarged view">
+            <img src="assets/dashboard.png" alt="Sales Performance and Customer Insights dashboard with total revenue, order count, average order value, monthly revenue, category revenue, regional revenue, customer spend, and cancellations." width="1920" height="1080">
+            <span class="image-action">Click to enlarge <span aria-hidden="true">&#8599;</span></span>
+          </a>
+          <p class="image-caption">Dashboard image: 1920 × 1080 pixels (16:9). KPIs use eligible Completed orders; cancellation figures use all cleaned orders.</p>
+        </section>
+
+        <section id="context" class="case-section">
+          <div class="section-kicker">03 / BUSINESS QUESTION</div>
+          <h2>Context &amp; Objectives</h2>
+          <p>The capstone uses a synthetic retail/e-commerce dataset with deliberate quality issues. The assignment asked for an analyst-style explanation of store performance and revenue drivers, supported by a reproducible notebook and documented cleaning decisions.</p>
+          <div class="question-panel">“How is the store performing, and what drives revenue?”</div>
+          <h3>Project objectives</h3>
+          <ul class="text-list">
+            <li>Prepare inconsistent, partially missing, and duplicated transaction data for analysis.</li>
+            <li>Connect orders, order items, products, and customers without changing the intended item-level grain.</li>
+            <li>Measure merchandise revenue, completed-order count, and average order value.</li>
+            <li>Compare monthly sales, leading products and categories, and geographic contributions.</li>
+            <li>Understand observed one-order versus repeat-customer patterns and the order cancellation trend.</li>
+          </ul>
+        </section>
+
+        <section id="dataset" class="case-section">
+          <div class="section-kicker">04 / SOURCE DATA</div>
+          <h2>Dataset Overview</h2>
+          <p>Seven source tables were loaded. The figures below are row counts <strong>after exact duplicate removal</strong>, not the number of customers or sales orders used in the final KPI population.</p>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Source file</th><th scope="col">Cleaned rows</th><th scope="col">Role in analysis</th></tr></thead>
+              <tbody>
+                <tr><td><code>customers.csv</code></td><td class="number">5,000</td><td>Customer profiles and geography</td></tr>
+                <tr><td><code>products.csv</code></td><td class="number">800</td><td>Product information and standardized categories</td></tr>
+                <tr><td><code>orders.csv</code></td><td class="number">15,000</td><td>Status, date, customer and discount</td></tr>
+                <tr><td><code>order_items.csv</code></td><td class="number">37,501</td><td>Product quantity and purchase-time price</td></tr>
+                <tr><td><code>payments.csv</code></td><td class="number">15,000</td><td>Reviewed during cleaning; not used as merchandise revenue</td></tr>
+                <tr><td><code>shipments.csv</code></td><td class="number">15,000</td><td>Reviewed during data preparation</td></tr>
+                <tr><td><code>returns.csv</code></td><td class="number">1,200</td><td>Reviewed during preparation; cancellation was chosen as the trend</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-note">Data dictionary describes these records as synthetic training data. The 25-month analysis window spans January 2024 through January 2026.</p>
+        </section>
+
+        <section id="cleaning" class="case-section">
+          <div class="section-kicker">05 / DATA QUALITY</div>
+          <h2>Data Cleaning &amp; Validation</h2>
+          <p>The raw files intentionally contained category variations, nulls, duplicates, mixed dates, currency strings, and orphan references. Each major change was checked, and unresolved issues were retained or flagged rather than silently replaced.</p>
+          <div class="process-grid">
+            <div class="process-card"><span>01</span><h3>Duplicates</h3><p>Removed 387 exact duplicate rows. Primary keys were then checked for missing or repeated IDs.</p></div>
+            <div class="process-card"><span>02</span><h3>Standardization</h3><p>Consolidated 18 product category labels into eight categories; converted mixed dates and numeric/currency fields.</p></div>
+            <div class="process-card"><span>03</span><h3>Missing values</h3><p>Used documented rules for missing discounts and labels; preserved unresolved fields as missing where no defensible value existed.</p></div>
+            <div class="process-card"><span>04</span><h3>Join integrity</h3><p>Flagged 43 orders with an unmatched customer ID and 129 items with an unmatched product ID.</p></div>
+            <div class="process-card"><span>05</span><h3>Price checks</h3><p>Recovered 2,227 of 2,236 missing purchase prices from the product master; nine remained unresolved.</p></div>
+            <div class="process-card"><span>06</span><h3>Sales eligibility</h3><p>Flagged 378 orders with item-quality issues. Of these, 238 Completed orders were excluded from merchandise KPIs.</p></div>
+          </div>
+          <div class="method-note"><strong>Why not delete every imperfect row?</strong> The all-record fact table retains documented orphan records. Only the separately defined eligible-sales table excludes Completed orders whose item quantities or prices make a reliable full-order total impossible.</div>
+        </section>
+
+        <section id="model" class="case-section">
+          <div class="section-kicker">06 / ANALYTICAL APPROACH</div>
+          <h2>Fact Table &amp; Methodology</h2>
+          <p><strong>Fact table grain:</strong> one row per <code>order_item_id</code>. Left joins to orders, products, and customers preserved all <strong>37,501</strong> cleaned item rows. Many-to-one validation ensured that the joins did not multiply line items.</p>
+          <div class="pipeline" aria-label="Data model pipeline">
+            <div><small>BASE TABLE</small><strong>Order Items</strong><span>37,501 lines</span></div>
+            <span class="pipeline-arrow" aria-hidden="true">+</span>
+            <div><small>JOIN</small><strong>Orders</strong><span>Status &amp; discount</span></div>
+            <span class="pipeline-arrow" aria-hidden="true">+</span>
+            <div><small>JOIN</small><strong>Products</strong><span>Category &amp; product</span></div>
+            <span class="pipeline-arrow" aria-hidden="true">+</span>
+            <div><small>JOIN</small><strong>Customers</strong><span>Region &amp; city</span></div>
+          </div>
+          <h3>Revenue and inclusion rules</h3>
+          <div class="formula-box">Line revenue = quantity × unit_price_at_purchase × (1 − discount_pct)</div>
+          <ul class="text-list">
+            <li><strong>Sales population:</strong> orders with status <code>Completed</code>, excluding any Completed order with an unusable item quantity or unresolved purchase price.</li>
+            <li><strong>Included:</strong> 9,612 eligible Completed orders across 23,876 usable sales item rows.</li>
+            <li><strong>Excluded from merchandise revenue:</strong> shipping fees; refunds were not subtracted.</li>
+            <li><strong>Repeat customer:</strong> a matched customer with 2+ eligible orders within the observed dataset. One eligible order is labeled “New (1 order)” for this analysis, not a proven first-ever purchase.</li>
+            <li><strong>Cancellation rate:</strong> cancelled orders divided by all cleaned orders, grouped by <em>order-placement month</em> because no separate cancellation event date was supplied.</li>
+            <li><strong>Unknowns:</strong> unmatched product and customer geography remain in totals as clearly labeled unknown groups.</li>
+          </ul>
+        </section>
+
+        <section id="kpis" class="case-section">
+          <div class="section-kicker">07 / PERFORMANCE MEASURES</div>
+          <h2>Key Performance Indicators</h2>
+          <div class="kpi-grid" aria-label="Core sales KPIs">
+            <div class="metric-card"><span>Total merchandise revenue</span><strong>PHP 4,383,742.63</strong><small>Eligible Completed orders</small></div>
+            <div class="metric-card"><span>Total eligible orders</span><strong>9,612</strong><small>One count per order ID</small></div>
+            <div class="metric-card"><span>Average order value</span><strong>PHP 456.07</strong><small>Revenue / eligible orders</small></div>
+            <div class="metric-card"><span>Matched customers</span><strong>4,276</strong><small>2,873 repeat · 1,403 one-order</small></div>
+            <div class="metric-card"><span>Cancellation rate</span><strong>8.23%</strong><small>1,235 / 15,000 cleaned orders</small></div>
+            <div class="metric-card"><span>Top revenue month</span><strong>Jul 2024</strong><small>PHP 200,411.55</small></div>
+          </div>
+          <p class="small-note">The final merchandise revenue was reconciled from the item level to the order level; month, product, category, region, and city revenue breakdowns also reconcile to the same total.</p>
+        </section>
+
+        <section id="visualizations" class="case-section case-section-wide">
+          <div class="section-kicker">08 / CHART LIBRARY</div>
+          <div class="section-heading-row">
+            <div>
+              <h2>Visual Analysis</h2>
+              <p>Six exported PNG charts. Use the filters or open any chart for a closer look.</p>
+            </div>
+            <span class="chart-count" id="visibleChartCount" aria-live="polite">6 charts</span>
+          </div>
+          <div class="filter-toolbar" role="group" aria-label="Filter visualizations">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All Charts</button>
+            <button class="filter-button" type="button" data-filter="revenue" aria-pressed="false">Revenue</button>
+            <button class="filter-button" type="button" data-filter="customers" aria-pressed="false">Customers</button>
+            <button class="filter-button" type="button" data-filter="orders" aria-pressed="false">Cancellations</button>
+          </div>
+          <div class="chart-gallery" id="chartGallery">
+            <article class="chart-card" data-category="revenue">
+              <a href="assets/monthly-revenue.png" data-lightbox data-caption="Monthly Revenue Trend — January 2024 to January 2026" aria-label="Enlarge monthly revenue line chart">
+                <img src="assets/monthly-revenue.png" alt="Monthly revenue line chart across 25 months, peaking in July 2024." loading="lazy" width="1902" height="941">
+              </a>
+              <div class="chart-info"><span class="chart-type">01 / Revenue</span><h3>Monthly Revenue Trend</h3><p>Monthly sales fluctuate; July 2024 records the highest value at about PHP 200.4K.</p></div>
+            </article>
+            <article class="chart-card" data-category="revenue">
+              <a href="assets/category-revenue.png" data-lightbox data-caption="Revenue by Product Category" aria-label="Enlarge category revenue bar chart">
+                <img src="assets/category-revenue.png" alt="Product category revenue bars led by Toys and Electronics." loading="lazy" width="1579" height="943">
+              </a>
+              <div class="chart-info"><span class="chart-type">02 / Revenue</span><h3>Revenue by Category</h3><p>Toys leads at PHP 598.9K, followed closely by Electronics at PHP 591.5K.</p></div>
+            </article>
+            <article class="chart-card" data-category="revenue">
+              <a href="assets/top10-products.png" data-lightbox data-caption="Top 10 Products by Revenue" aria-label="Enlarge top products revenue chart">
+                <img src="assets/top10-products.png" alt="Top 10 product revenue ranking, led by KidJoy Toys 607." loading="lazy" width="1891" height="1103">
+              </a>
+              <div class="chart-info"><span class="chart-type">03 / Revenue</span><h3>Top 10 Products</h3><p>KidJoy Toys 607 generated the most product revenue at PHP 22.3K.</p></div>
+            </article>
+            <article class="chart-card" data-category="revenue">
+              <a href="assets/region-revenue.png" data-lightbox data-caption="Revenue by Customer Region" aria-label="Enlarge regional revenue chart">
+                <img src="assets/region-revenue.png" alt="Revenue by region led by Central Luzon, with unknown geography retained." loading="lazy" width="1730" height="943">
+              </a>
+              <div class="chart-info"><span class="chart-type">04 / Revenue</span><h3>Revenue by Region</h3><p>Central Luzon contributes PHP 763.5K, about 17.4% of eligible sales revenue.</p></div>
+            </article>
+            <article class="chart-card" data-category="customers">
+              <a href="assets/customer-spend.png" data-lightbox data-caption="Distribution of Customer Spend — matched customers only" aria-label="Enlarge customer spend histogram">
+                <img src="assets/customer-spend.png" alt="Right-skewed histogram of total spend by matched customer." loading="lazy" width="1582" height="943">
+              </a>
+              <div class="chart-info"><span class="chart-type">05 / Customers</span><h3>Customer Spend Distribution</h3><p>The distribution is right-skewed; fewer matched customers reach higher spending levels.</p></div>
+            </article>
+            <article class="chart-card" data-category="orders">
+              <a href="assets/cancellation-trend.png" data-lightbox data-caption="Cancelled Orders by Order-Placement Month" aria-label="Enlarge cancellation trend chart">
+                <img src="assets/cancellation-trend.png" alt="Monthly cancelled-order counts, with joint peaks at 60 in October 2024 and January 2025." loading="lazy" width="1902" height="941">
+              </a>
+              <div class="chart-info"><span class="chart-type">06 / Cancellations</span><h3>Cancellation Trend</h3><p>October 2024 and January 2025 are tied at 60 cancelled orders each.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="takeaways" class="case-section">
+          <div class="section-kicker">09 / AT A GLANCE</div>
+          <h2>Key Takeaways</h2>
+          <div class="takeaway-grid">
+            <div class="takeaway-item"><span>01</span><p><strong>Revenue is uneven over time.</strong> July 2024 peaked at PHP 200.4K; January 2025 was the lowest at PHP 146.5K.</p></div>
+            <div class="takeaway-item"><span>02</span><p><strong>No one category dominates.</strong> Toys contributed about 13.66% and Electronics 13.49% of total revenue.</p></div>
+            <div class="takeaway-item"><span>03</span><p><strong>Geographic contribution is distributed.</strong> Central Luzon led at 17.42%, with several other regions close behind.</p></div>
+            <div class="takeaway-item"><span>04</span><p><strong>Repeat customers generate most matched-customer revenue.</strong> Their contribution was about 85.4%.</p></div>
+            <div class="takeaway-item"><span>05</span><p><strong>Customer spend is right-skewed.</strong> Most matched customers fall in lower spending ranges.</p></div>
+            <div class="takeaway-item"><span>06</span><p><strong>Cancellations warrant review.</strong> The overall rate was 8.23%, reaching 10.77% for the January 2025 order cohort.</p></div>
+          </div>
+        </section>
+
+        <section id="insights" class="case-section">
+          <div class="section-kicker">10 / FINDINGS</div>
+          <h2>Eight Evidence-Based Insights</h2>
+          <ol class="insight-list">
+            <li><strong>PHP 4.38M revenue across 9,612 eligible orders.</strong> The calculated AOV was PHP 456.07 under the defined Completed-order and data-quality rules.</li>
+            <li><strong>Sales fluctuated rather than growing steadily.</strong> Monthly revenue ranged from about PHP 146.5K in January 2025 to PHP 200.4K in July 2024.</li>
+            <li><strong>Toys and Electronics are close category leaders.</strong> Toys generated PHP 598.9K versus Electronics at PHP 591.5K; neither alone accounts for even 14% of revenue.</li>
+            <li><strong>Product revenue is dispersed.</strong> The top identified product, KidJoy Toys 607, contributed PHP 22.25K, about 0.51% of total eligible merchandise revenue.</li>
+            <li><strong>Central Luzon ranks first geographically.</strong> It generated PHP 763.5K (17.42%); Olongapo was the highest-revenue city at PHP 270.0K.</li>
+            <li><strong>Repeat customers drive most matched-customer sales.</strong> Repeat customers were 67.2% of matched customers but generated 85.4% of that group's revenue.</li>
+            <li><strong>Customer spending is right-skewed.</strong> A smaller group of matched customers has substantially higher cumulative spending than the main concentration.</li>
+            <li><strong>Cancellations vary across order cohorts.</strong> Of 15,000 cleaned orders, 1,235 were cancelled (8.23%). January 2025 had the highest cancellation rate at 10.77%.</li>
+          </ol>
+          <p class="small-note">These are descriptive observations. The dataset does not establish why the changes happened; potential causes would need separate investigation.</p>
+        </section>
+
+        <section id="summary-conclusions" class="case-section">
+          <div class="section-kicker">11 / SYNTHESIS</div>
+          <h2>Summary &amp; Conclusions</h2>
+          <h3>Summary</h3>
+          <p>The project turned seven inconsistent CSV datasets into a validated item-level analysis model and a defined population of Completed sales orders. Revenue totals reconcile across multiple business breakdowns, making the KPI results and visuals internally consistent.</p>
+          <h3>Conclusions</h3>
+          <p>Revenue is spread across product categories and regions, while repeat customers account for most sales among matched customers. Monthly revenue and cancellation counts both fluctuate, and the analysis points to questions worth investigating further—not to proven causal explanations.</p>
+        </section>
+
+        <section id="recommendations" class="case-section">
+          <div class="section-kicker">12 / NEXT ACTIONS</div>
+          <h2>Two Recommendations</h2>
+          <div class="recommendation-grid">
+            <article class="recommendation-card"><div class="rec-number">01</div><h3>Retain repeat customers and encourage second purchases</h3><p>Maintain a focus on repeat buyers, then test appropriate follow-up or cross-sell efforts for customers with only one observed eligible order. Measure subsequent order frequency and incremental revenue before scaling.</p></article>
+            <article class="recommendation-card"><div class="rec-number">02</div><h3>Investigate high-cancellation order cohorts</h3><p>Review the January 2025 and other elevated cancellation cohorts. Check fulfillment, product availability, customer requests, and order handling with operational data before deciding on a preventive action.</p></article>
+          </div>
+        </section>
+
+        <section id="deliverables" class="case-section">
+          <div class="section-kicker">13 / FILES &amp; REPRODUCIBILITY</div>
+          <h2>Project Deliverables</h2>
+          <p>This case study includes the notebook, the two specifically requested cleaned datasets, exported chart PNGs, and concise written summaries. All data files were taken from the synthetic training project.</p>
+          <div class="deliverable-grid">
+            <a class="download-card" href="downloads/Option_A_Sales_Analysis.ipynb" download><span class="download-icon" aria-hidden="true">{ }</span><span><strong>Python Notebook</strong><small>Jupyter analysis and reproducible steps · IPYNB</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+            <a class="download-card" href="Data/Cleaned/cleaned_customers.csv" download><span class="download-icon" aria-hidden="true">CSV</span><span><strong>Cleaned Customers</strong><small>5,000 records · CSV</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+            <a class="download-card" href="Data/Cleaned/cleaned_products.csv" download><span class="download-icon" aria-hidden="true">CSV</span><span><strong>Cleaned Products</strong><small>800 records · CSV</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+            <a class="download-card" href="downloads/Executive_Summary.txt" download><span class="download-icon" aria-hidden="true">TXT</span><span><strong>Executive Summary</strong><small>10 concise, evidence-based statements · TXT</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+            <a class="download-card" href="downloads/One_Page_Insights_Summary.md" download><span class="download-icon" aria-hidden="true">MD</span><span><strong>One-Page Insights Summary</strong><small>Eight insights and two recommendations · Markdown</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+            <a class="download-card" href="assets/dashboard.png" download><span class="download-icon" aria-hidden="true">PNG</span><span><strong>Dashboard Screenshot</strong><small>Verified 1920 × 1080 · PNG</small></span><span class="download-arrow" aria-hidden="true">&#8595;</span></a>
+          </div>
+          <p class="small-note">The six standalone chart images are available in the Visual Analysis gallery. The full synthetic raw dataset is included in the repository's <code>Data/Raw</code> folder so the notebook can be rerun. The separately required capstone submission PDF is not part of this web case study.</p>
+          <div class="skills-block"><h3>Tools &amp; Skills Demonstrated</h3><div class="tech-tags"><span>Python &amp; Jupyter</span><span>Pandas groupby / merge</span><span>NumPy</span><span>Datetime parsing</span><span>Data-quality audit</span><span>Revenue reconciliation</span><span>Matplotlib</span><span>Analytical storytelling</span></div></div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="project-navigation">
+        <a href="../../index.html#capstone">&#8592; Back to Capstone Projects</a>
+        <a href="../sql-capstone/">View SQL Capstone &#8594;</a>
+      </div>
+      <p>&copy; 2026 Somel Chan &bull; Brewing Insights. Delivering Impact.</p>
+    </footer>
+  </div>
+
+  <dialog id="imageDialog" class="image-dialog" aria-label="Enlarged case study visual">
+    <div class="dialog-header"><p id="dialogCaption">Chart preview</p><button id="closeDialog" class="close-dialog" type="button" aria-label="Close enlarged image">&times;</button></div>
+    <div class="dialog-image-wrapper"><img id="dialogImage" src="assets/dashboard.png" alt="Enlarged case study chart"></div>
+    <div class="dialog-footer"><a id="openOriginal" href="assets/dashboard.png" target="_blank" rel="noopener">Open original image &#8599;</a><span>Press Esc or click outside to close</span></div>
+  </dialog>
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+</body>
+</html>

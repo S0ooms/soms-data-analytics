@@ -1,0 +1,2 @@
+Rows before,Rows after,Categories before,Categories after,Labels changed,Missing categories,Action
+800,800,18,8,137,0,Standardized product categories using an explicit mapping after trimming spaces and normalizing capitalization; preserved original labels.

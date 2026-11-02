@@ -1,0 +1,7 @@
+﻿Child table,Child key,Parent table,Parent key,Child rows,Missing child keys,Orphan rows,Unique orphan keys
+orders,customer_id,customers,customer_id,15000,0,43,1
+order_items,order_id,orders,order_id,37501,0,0,0
+order_items,product_id,products,product_id,37501,0,129,1
+payments,order_id,orders,order_id,15000,0,0,0
+shipments,order_id,orders,order_id,15000,0,0,0
+returns,order_id,orders,order_id,1200,0,0,0

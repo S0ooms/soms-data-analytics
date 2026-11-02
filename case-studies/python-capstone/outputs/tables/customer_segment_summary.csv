@@ -1,0 +1,3 @@
+﻿customer_segment,customers,orders,revenue,average_customer_revenue,average_orders_per_customer,customer_share_pct,known_customer_revenue_share_pct
+New (1 order),1403,1403,638884.78197,455.3704789522452,1.0,32.8110383536015,14.621987201766684
+Repeat (2+ orders),2873,8177,3730458.27075,1298.4539752001392,2.8461538461538463,67.18896164639851,85.37801279823334

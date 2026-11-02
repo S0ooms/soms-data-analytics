@@ -1,0 +1,5 @@
+﻿Check,Rows
+Missing purchase prices before backfill,2236
+Prices backfilled from product master,2227
+Prices still unresolved,9
+Unresolved prices with orphan product,9

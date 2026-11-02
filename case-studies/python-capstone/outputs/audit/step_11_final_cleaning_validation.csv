@@ -1,0 +1,21 @@
+﻿Check,Passed,Details
+customers: expected row count,True,"Expected 5,000; actual 5,000"
+products: expected row count,True,Expected 800; actual 800
+orders: expected row count,True,"Expected 15,000; actual 15,000"
+order_items: expected row count,True,"Expected 37,501; actual 37,501"
+payments: expected row count,True,"Expected 15,000; actual 15,000"
+shipments: expected row count,True,"Expected 15,000; actual 15,000"
+returns: expected row count,True,"Expected 1,200; actual 1,200"
+No exact duplicate rows remain,True,Remaining exact duplicates: 0
+customers.customer_id: primary key valid,True,Repeated rows: 0; missing IDs: 0
+products.product_id: primary key valid,True,Repeated rows: 0; missing IDs: 0
+orders.order_id: primary key valid,True,Repeated rows: 0; missing IDs: 0
+order_items.order_item_id: primary key valid,True,Repeated rows: 0; missing IDs: 0
+Products standardized to 8 categories,True,Categories found: 8
+No numeric/date parsing failures,True,Parsing failures: 0
+No negative ages remain,True,Negative ages remaining: 0
+No missing discount_pct values remain,True,Missing discounts remaining: 0
+Customer orphan records documented,True,Customer-orphan order rows: 43
+Product orphan records documented,True,Product-orphan item rows: 129
+Purchase-price backfill reconciled,True,Backfilled: 2227; unresolved: 9
+Sales-quality flags retained,True,Invalid quantity rows: 372; affected orders: 378

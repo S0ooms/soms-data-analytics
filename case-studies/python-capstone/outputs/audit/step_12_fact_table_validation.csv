@@ -1,0 +1,7 @@
+﻿Check,Passed,Details
+Fact table has one row per cleaned order item,True,"Fact rows: 37,501"
+order_item_id remains unique,True,"Unique order_item_id: 37,501"
+All item rows matched an order,True,Rows without order details: 0
+129 product-orphan rows preserved,True,Product-orphan rows: 129
+43 customer-orphan orders preserved,True,Unique customer-orphan orders: 43
+378 sales-quality issue orders preserved,True,Affected orders: 378
